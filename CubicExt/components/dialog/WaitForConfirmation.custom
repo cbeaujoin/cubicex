@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.dialog.WaitForConfirmation</displayText>
+        <path>/CubicSampleProject/src/main/java/nl/sodeso/test/WaitForValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>WaitForConfirmation</name>
+  <description>Waits for a confirmation dialog to appear.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>The message you are expecting. (optional)</description>
+        <key>value</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>timeout (default is 30 Seconds)</description>
+        <key>timeout</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>

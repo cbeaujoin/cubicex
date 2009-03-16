@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.dialog.StorePrompt</displayText>
+        <path>/CubicSampleProject/src/main/java/nl/sodeso/test/WaitForValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>StorePrompt</name>
+  <description>Stores the prompt message (when a prompt is present) into the memory.Stores the confirmation message (when a confirmation is present) into the memory.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>name of the variable</description>
+        <key>variable</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>timeout (default is 30 Seconds)</description>
+        <key>timeout</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>

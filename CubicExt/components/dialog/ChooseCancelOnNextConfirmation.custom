@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.dialog.ChooseCancelOnNextConfirmation</displayText>
+        <path>/CubicSampleProject/src/main/java/nl/sodeso/test/WaitForValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>ChooseCancelOnNextConfirmation</name>
+  <description>When the next prompt window pops up it will choose Cancel.</description>
+  <parameters>
+    <parameters/>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
