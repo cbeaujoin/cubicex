@@ -109,4 +109,23 @@ public class ArgumentUtils {
 		String _target = arguments.get("target");
 		return _target;
 	}
+	
+	/**
+	 * Retrieves the <code>url</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @param arguments the arguments
+	 * 
+	 * @return the value of the <code>url</code> property 
+	 */
+	public static String getUrl(Map<String, String> arguments, IElementContext context) {
+		String _url = arguments.get("URL");
+		if (_url != null && _url.length() > 0) {
+			_url = VariableUtils.parseString(context, _url);
+		} else {
+			_url = "";
+		}
+		return _url;
+	}
+
 }
