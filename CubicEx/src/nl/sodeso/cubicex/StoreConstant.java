@@ -20,7 +20,7 @@ public class StoreConstant extends CubicExBaseTestCase {
 		final String _variable = getVariable();
 		final String _textToStore = getValue();
 		
-		VariableUtils.setStringVariable(context, _variable, _textToStore);
+		setStringVariable(_variable, _textToStore);
 	}
 
 }
