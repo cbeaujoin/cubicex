@@ -19,8 +19,7 @@ public class ChooseCancelOnNextConfirmation extends CubicExBaseTestCase {
 	/**
 	 * {@inheritDoc}
 	 */
-	public void execute(Map<String, String> arguments, IElementContext context,
-			final Selenium selenium) throws Exception {
+	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 		selenium.chooseCancelOnNextConfirmation();		
 	}
 

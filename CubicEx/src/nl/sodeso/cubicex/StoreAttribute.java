@@ -17,8 +17,8 @@ public class StoreAttribute extends CubicExBaseTestCase {
 	/**
 	 * {@inheritDoc}
 	 */
-	public void execute(Map<String, String> arguments, IElementContext context,
-			Selenium selenium) throws Exception {
+	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
+
 		// Retrieve the parameters.
 		final String _attributeLocator = getTarget();
 		final String _variable = getVariable();

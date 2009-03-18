@@ -21,8 +21,8 @@ public class WaitForPrompt extends CubicExBaseTestCase {
 	/**
 	 * {@inheritDoc}
 	 */
-	public void execute(Map<String, String> arguments, IElementContext context,
-			final Selenium selenium) throws Exception {
+	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
+
 		// Retrieve the parameters.
 		final String _valueToCompareTo = getValue();
 		final long _timeoutToUse = getTimeout();

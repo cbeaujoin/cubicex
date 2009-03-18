@@ -18,15 +18,25 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 
 	private Map<String, String> arguments = null;
 	private IElementContext context = null;
-	private Selenium selenium = null;
+	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void execute(Map<String, String> arguments, IElementContext context, Selenium selenium) throws Exception {
 		this.arguments = arguments;
 		this.context = context;
-		this.selenium = selenium;
+		
+		executeTest(arguments, context, selenium);
 	}
+	
+	/**
+	 * 
+	 * @param arguments
+	 * @param context
+	 * @param selenium
+	 * @throws Exception
+	 */
+	public abstract void executeTest(Map<String, String> arguments, IElementContext context, Selenium selenium) throws Exception;
 	
 	/**
 	 * Retrieves the <code>timeout</code> property.

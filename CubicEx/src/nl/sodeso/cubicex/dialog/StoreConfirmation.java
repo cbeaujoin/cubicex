@@ -20,8 +20,8 @@ public class StoreConfirmation extends CubicExBaseTestCase {
 	/**
 	 * {@inheritDoc}
 	 */
-	public void execute(Map<String, String> arguments, final IElementContext context,
-			final Selenium selenium) throws Exception {
+	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
+
 		// Retrieve the parameters.
 		final long _timeoutToUse = getTimeout();
 		final String _variable = getVariable();
