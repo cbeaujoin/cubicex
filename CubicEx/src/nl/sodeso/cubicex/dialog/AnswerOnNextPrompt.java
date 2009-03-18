@@ -2,9 +2,8 @@ package nl.sodeso.cubicex.dialog;
 
 import java.util.Map;
 
-import nl.sodeso.cubicex.util.ArgumentUtils;
+import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -15,7 +14,7 @@ import com.thoughtworks.selenium.Selenium;
  * @author r.mathies
  * @version 0.0.2
  */
-public class AnswerOnNextPrompt implements ICustomTestStep {
+public class AnswerOnNextPrompt extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -23,7 +22,7 @@ public class AnswerOnNextPrompt implements ICustomTestStep {
 	public void execute(Map<String, String> arguments, IElementContext context,
 			final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _textToWrite = ArgumentUtils.getValue(arguments, context);
+		final String _textToWrite = getValue();
 		
 		selenium.answerOnNextPrompt(_textToWrite);
 	}

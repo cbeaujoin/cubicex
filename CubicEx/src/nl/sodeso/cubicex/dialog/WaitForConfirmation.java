@@ -3,9 +3,8 @@ package nl.sodeso.cubicex.dialog;
 import java.util.Map;
 
 import junit.framework.Assert;
-import nl.sodeso.cubicex.util.ArgumentUtils;
+import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -17,7 +16,7 @@ import com.thoughtworks.selenium.Wait;
  * @author r.mathies
  * @version 0.0.1
  */
-public class WaitForConfirmation implements ICustomTestStep {
+public class WaitForConfirmation extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -25,8 +24,8 @@ public class WaitForConfirmation implements ICustomTestStep {
 	public void execute(Map<String, String> arguments, IElementContext context,
 			final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _valueToCompareTo = ArgumentUtils.getValue(arguments, context);
-		final long _timeoutToUse = ArgumentUtils.getTimeout(arguments);
+		final String _valueToCompareTo = getValue();
+		final long _timeoutToUse = getTimeout();
 		
 		new Wait() {
 		  public boolean until() {

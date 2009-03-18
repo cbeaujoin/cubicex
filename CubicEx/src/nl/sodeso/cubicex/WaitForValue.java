@@ -2,9 +2,6 @@ package nl.sodeso.cubicex;
 
 import java.util.Map;
 
-import nl.sodeso.cubicex.util.ArgumentUtils;
-
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -16,7 +13,7 @@ import com.thoughtworks.selenium.Wait;
  * @author r.mathies
  * @version 0.0.1
  */
-public class WaitForValue implements ICustomTestStep {
+public class WaitForValue extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -24,9 +21,9 @@ public class WaitForValue implements ICustomTestStep {
 	public void execute(Map<String, String> arguments, IElementContext context,
 			final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _locator = ArgumentUtils.getTarget(arguments);
-		final String _valueToCompareTo = ArgumentUtils.getValue(arguments, context);
-		final long _timeoutToUse = ArgumentUtils.getTimeout(arguments);
+		final String _locator = getTarget();
+		final String _valueToCompareTo = getValue();
+		final long _timeoutToUse = getTimeout();
 		
 		new Wait() {
 		  public boolean until() {

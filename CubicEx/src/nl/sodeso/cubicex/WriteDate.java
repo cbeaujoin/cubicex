@@ -4,9 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Map;
 
-import nl.sodeso.cubicex.util.ArgumentUtils;
-
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -17,14 +14,14 @@ import com.thoughtworks.selenium.Selenium;
  * @author r.mathies
  * @version 0.0.1
  */
-public class WriteDate implements ICustomTestStep {
+public class WriteDate extends CubicExBaseTestCase {
 
 	public void execute(Map<String, String> arguments, IElementContext context,
 			Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _locator = ArgumentUtils.getTarget(arguments);
-		final String _format = ArgumentUtils.getFormat(arguments, context);
-		final Integer _deviation = ArgumentUtils.getDeviation(arguments, context);
+		final String _locator = getTarget();
+		final String _format = getFormat();
+		final Integer _deviation = getDeviation();
 		
 		// Process the deviation
 		Calendar calendar = Calendar.getInstance();

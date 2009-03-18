@@ -2,10 +2,6 @@ package nl.sodeso.cubicex;
 
 import java.util.Map;
 
-import nl.sodeso.cubicex.util.ArgumentUtils;
-import nl.sodeso.cubicex.util.VariableUtils;
-
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -16,13 +12,13 @@ import com.thoughtworks.selenium.Selenium;
  * @author r.mathies
  * @version 0.0.1
  */
-public class StoreConstant implements ICustomTestStep {
+public class StoreConstant extends CubicExBaseTestCase {
 
 	public void execute(Map<String, String> arguments, IElementContext context,
 			Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _variable = ArgumentUtils.getVariable(arguments);
-		final String _textToStore = ArgumentUtils.getValue(arguments, context);
+		final String _variable = getVariable();
+		final String _textToStore = getValue();
 		
 		VariableUtils.setStringVariable(context, _variable, _textToStore);
 	}

@@ -2,7 +2,8 @@ package nl.sodeso.cubicex.dialog;
 
 import java.util.Map;
 
-import org.cubictest.selenium.custom.ICustomTestStep;
+import nl.sodeso.cubicex.CubicExBaseTestCase;
+
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -13,7 +14,7 @@ import com.thoughtworks.selenium.Selenium;
  * @author r.mathies
  * @version 0.0.1
  */
-public class ChooseCancelOnNextPrompt implements ICustomTestStep {
+public class ChooseCancelOnNextPrompt extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}

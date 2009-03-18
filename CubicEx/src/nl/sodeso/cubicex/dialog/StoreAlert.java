@@ -2,9 +2,8 @@ package nl.sodeso.cubicex.dialog;
 
 import java.util.Map;
 
-import nl.sodeso.cubicex.util.ArgumentUtils;
+import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -16,7 +15,7 @@ import com.thoughtworks.selenium.Wait;
  * @author r.mathies
  * @version 0.0.1
  */
-public class StoreAlert implements ICustomTestStep {
+public class StoreAlert extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -24,8 +23,8 @@ public class StoreAlert implements ICustomTestStep {
 	public void execute(Map<String, String> arguments, final IElementContext context,
 			final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final long _timeoutToUse = ArgumentUtils.getTimeout(arguments);
-		final String _variable = ArgumentUtils.getVariable(arguments);
+		final long _timeoutToUse = getTimeout();
+		final String _variable = getVariable();
 		
 		new Wait() {
 		  public boolean until() {
