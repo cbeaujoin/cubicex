@@ -5,7 +5,7 @@
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
         <displayText>nl.sodeso.event.FireLinkEvent</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WriteValue.java</path>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/FireLinkEvent.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>

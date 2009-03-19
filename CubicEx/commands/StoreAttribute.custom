@@ -5,12 +5,12 @@
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
         <displayText>nl.sodeso.cubicex.command.StoreAttribute</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/StoreValue.java</path>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/StoreAttribute.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
   <name>StoreAttribute</name>
-  <description>Stores the value of the given attribute &lt;target&gt; in memory.Stores the value of tdhe given &lt;target&gt; in memory under the name of the &lt;variable&gt;.</description>
+  <description>Stores the value of the given attribute &lt;target&gt; in memory.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>

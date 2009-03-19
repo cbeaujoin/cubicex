@@ -5,7 +5,7 @@
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
         <displayText>nl.sodeso.cubicex.command.StoreConfirmation</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WaitForValue.java</path>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/StoreConfirmation.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>

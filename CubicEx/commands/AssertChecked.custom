@@ -4,22 +4,18 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.cubicex.command.AssertText</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertText.java</path>
+        <displayText>nl.sodeso.cubicex.command.AssertChecked</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertChecked.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>AssertText</name>
-  <description>Asserts the value of the target against the value specified.</description>
+  <name>VerifyChecked</name>
+  <description>Asserts that the specified &lt;target&gt; (checkbox / radiobutton) is checked.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>
         <description>An element locator.</description>
         <key>target</key>
-      </customTestStepParameter>
-      <customTestStepParameter>
-        <description>(variable sensitive)</description>
-        <key>value</key>
       </customTestStepParameter>
     </parameters>
   </parameters>

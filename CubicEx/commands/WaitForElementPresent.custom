@@ -5,12 +5,12 @@
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
         <displayText>nl.sodeso.cubicex.command.WaitForElementPresent</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WaitForValue.java</path>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WaitForElementPresent.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
   <name>WaitForElementPresent</name>
-  <description>Waits for the given &lt;target&gt; to become present.Waits for the given &lt;&lt;value&gt; (or stored memory &lt;variable&gt;) to popup in the the specified &lt;target&gt;, timeout will occure after &lt;timeout&gt; milliseconds.</description>
+  <description>Waits for the given &lt;target&gt; to become present.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>
