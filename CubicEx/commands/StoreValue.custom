@@ -4,7 +4,7 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.store.StoreValue</displayText>
+        <displayText>nl.sodeso.cubicex.command.StoreValue</displayText>
 		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/StoreValue.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
