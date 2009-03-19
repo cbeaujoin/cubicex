@@ -1,0 +1,305 @@
+<html>
+	<head>
+		<title>Start Page</title>
+		<script type="text/javascript">
+			function performButtonAjax1() {
+				setTimeout("performButtonAjax1Execute()", 2000);
+			}
+			function performButtonAjax1Execute() {
+				document.getElementById('input_ajax_1_id').value = "2 second Ajax call performed";
+			}
+
+
+
+			function performButtonAjax2() {
+				setTimeout("performButtonAjax2Execute()", 7000);
+			}
+			function performButtonAjax2Execute() {
+				document.getElementById('input_ajax_2_id').value = "7 second Ajax call performed";
+			}
+			
+			
+			
+			function performButtonConfirmAjax1() {
+				setTimeout("performButtonConfirmAjax1Execute()", 2000);
+			}
+			function performButtonConfirmAjax1Execute() {
+				var result = confirm("performButtonConfirmAjax1Execute");
+				if (result) {
+					alert("OK");
+				} else {
+					alert("CANCEL");
+				}
+			}
+
+
+			function performButtonConfirmAjax2() {
+				setTimeout("performButtonConfirmAjax1Execute()", 7000);
+			}
+			function performButtonConfirmAjax2Execute() {
+				var result = confirm("performButtonConfirmAjax2Execute");
+				if (result) {
+					alert("OK");
+				} else {
+					alert("CANCEL");
+				}
+			}
+			
+			function performButtonAlertAjax1() {
+				setTimeout("performButtonAlertAjax1Execute()", 2000);
+			}
+			function performButtonAlertAjax1Execute() {
+				var result = alert("performButtonAlertAjax1Execute");
+			}
+
+
+			function performButtonAlertAjax2() {
+				setTimeout("performButtonAlertAjax1Execute()", 7000);
+			}
+			function performButtonAlertAjax2Execute() {
+				var result = alert("performButtonAlertAjax2Execute");
+			}
+			
+
+			function performButtonPromptAjax1() {
+				setTimeout("performButtonPromptAjax1Execute()", 2000);
+			}
+			function performButtonPromptAjax1Execute() {
+				var result = prompt("performButtonPromptAjax1Execute", "default");
+				if (result == null) {
+					alert("null");
+				} else {
+					alert(result);
+				}
+			}
+
+
+			function performButtonPromptAjax2() {
+				setTimeout("performButtonPromptAjax1Execute()", 7000);
+			}
+			function performButtonPromptAjax2Execute() {
+				var result = prompt("performButtonPromptAjax2Execute", "default");
+				if (result == null) {
+					alert("null");
+				} else {
+					alert(result);
+				}
+			}
+			
+			
+			function performButtonElementAjax1() {
+				setTimeout("performButtonElementAjax1Execute()", 2000);
+			}
+			function performButtonElementAjax1Execute() {
+				var td = document.getElementById('element_1_id');
+				var newInput = document.createElement('input');
+				newInput.setAttribute("id", "new_input_element_1");
+				td.appendChild(newInput);
+			}
+			
+			function performButtonElementAjax2() {
+				setTimeout("performButtonElementAjax2Execute()", 7000);
+			}
+			function performButtonElementAjax2Execute() {
+				var td = document.getElementById('element_2_id');
+				var newInput = document.createElement('input');
+				newInput.setAttribute("id", "new_input_element_2");
+				td.appendChild(newInput);
+			}
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td colspan="2"><b>Disabled textfield:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Field:
+				</td>
+				<td>
+					<input type="text" id="input_disabled_text_1_id" name="input_disabled_text_1_id" disabled="disabled"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><b>Readonly textfield:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Field:
+				</td>
+				<td>
+					<input type="text" id="input_readonly_text_1_id" name="input_readonly_text_1_id" disabled="disabled" value="Disabled field"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><b>Simple textfields:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Clean HTML input field with no text (1):
+				</td>
+				<td>
+					<input type="text" id="input_no_text_1_id" name="input_no_text_1_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Clean HTML input field with no text (2):
+				</td>
+				<td>
+					<input type="text" id="input_no_text_2_id" name="input_no_text_2_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					HTML input field with text (1):
+				</td>
+				<td>
+					<input type="text" id="input_with_text_1_id" name="input_with_text_1_name" 
+						value="HTML input field with text (1) value"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					HTML input field with text (2):
+				</td>
+				<td>
+					<input type="text" id="input_with_text_2_id" name="input_with_text_2_name" 
+						value="HTML input field with text (2) value"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Ajax textfields:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" id="button_ajax_1_id" name="button_ajax_1_name"
+						value="Perform 2 second Ajax call" onclick="javascript: performButtonAjax1();"/>
+				</td>
+				<td>
+					<input type="text" id="input_ajax_1_id" name="input_ajax_1_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" id="button_ajax_2_id" name="button_ajax_2_name"
+						value="Perform 7 second Ajax call" onclick="javascript: performButtonAjax2();"/>
+				</td>
+				<td>
+					<input type="text" id="input_ajax_2_id" name="input_ajax_2_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Checkboxes:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Checkbox not checked:
+				</td>
+				<td>
+					<input type="checkbox" id="checkbox_1_id" name="checkbox_1_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Checkbox checked:
+				</td>
+				<td>
+					<input type="checkbox" id="checkbox_2_id" name="checkbox_2_name" checked/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Radiobuttons:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Radio buttons:
+				</td>
+				<td>
+					<input type="radio" id="radio_1_1_id" name="radio_group_1"/> option 1<br/>
+					<input type="radio" id="radio_1_2_id" name="radio_group_1" checked/> option 2<br/>
+					<input type="radio" id="radio_1_3_id" name="radio_group_1"/> option 3<br/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>JavaScript Confirm / Alert / Prompt:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_confirm_1_id" name="button_confirm_1_name"
+						value="Show 2 second Confirm" onclick="javascript: performButtonConfirmAjax1();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_confirm_2_id" name="button_confirm_2_name"
+						value="Show 7 second Confirm" onclick="javascript: performButtonConfirmAjax2();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_confirm_simple_1_id" name="button_confirm_simple_1_name"
+						value="Show simple Confirm" onclick="javascript: confirm('Simple confirmation');"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_alert_1_id" name="button_alert_1_name"
+						value="Show 2 second Alert" onclick="javascript: performButtonAlertAjax1();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_alert_2_id" name="button_alert_2_name"
+						value="Show 7 second Alert" onclick="javascript: performButtonAlertAjax2();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_prompt_1_id" name="button_prompt_1_name"
+						value="Show 2 second prompt" onclick="javascript: performButtonPromptAjax1();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_prompt_2_id" name="button_prompt_2_name"
+						value="Show 7 second prompt" onclick="javascript: performButtonPromptAjax2();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_prompt_simple_id" name="button_prompt_simple_name"
+						value="Show simple prompt" onclick="javascript: prompt('Simple prompt', '');"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Create element buttons:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" id="button_element_1_id" name="button_element_1_name"
+						value="Create 2 second element" onclick="javascript: performButtonElementAjax1();"/>
+				</td>
+				<td id="element_1_id">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" id="button_element_2_id" name="button_element_2_name"
+						value="Create 7 second element" onclick="javascript: performButtonElementAjax2();"/>
+				</td>
+				<td id="element_2_id">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Go to next page:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<a id="url_next_page_id" name="url_next_page_name" href="End.html">Go to the next page.</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

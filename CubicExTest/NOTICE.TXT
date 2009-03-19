@@ -1,0 +1,11 @@
+CubicExTest
+Copyright 2009 Sodeso
+
+This library includes software developed by
+Sodeso (http://www.sodeso.nl/).
+
+This project contains a slightly adjusted NanoHTTPD which is 
+developed by Jarno Elonen <elonen@iki.fi>
+Download can be found at:
+
+  http://elonen.iki.fi/code/nanohttpd/

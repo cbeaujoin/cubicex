@@ -1,0 +1,1 @@
+java -cp NanoHTTPD.1.11.jar nl.sodeso.cubicex.server.NanoHTTPD 80 .
