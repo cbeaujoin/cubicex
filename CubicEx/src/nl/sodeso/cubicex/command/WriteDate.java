@@ -24,9 +24,9 @@ public class WriteDate extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _locator = getTarget();
-		final String _format = getFormat();
-		final Integer _deviation = getDeviation();
+		final String _locator = getArgTarget();
+		final String _format = getArgFormat();
+		final Integer _deviation = getArgDeviation();
 		
 		// Process the deviation
 		Calendar calendar = Calendar.getInstance();

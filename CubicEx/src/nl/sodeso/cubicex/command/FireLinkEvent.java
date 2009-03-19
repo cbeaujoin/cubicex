@@ -22,7 +22,7 @@ public class FireLinkEvent extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _url = getUrl();
+		final String _url = getArgUrl();
 		
 		selenium.open(_url);
 	}

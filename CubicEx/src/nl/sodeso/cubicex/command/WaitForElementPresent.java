@@ -23,8 +23,8 @@ public class WaitForElementPresent extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _locator = getTarget();
-		final long _timeoutToUse = getTimeout();
+		final String _locator = getArgTarget();
+		final long _timeoutToUse = getArgTimeout();
 		
 		new Wait() {
 		  public boolean until() {

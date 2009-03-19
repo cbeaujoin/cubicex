@@ -22,8 +22,8 @@ public class StoreAttribute extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _attributeLocator = getTarget();
-		final String _variable = getVariable();
+		final String _attributeLocator = getArgTarget();
+		final String _variable = getArgVariable();
 		
 		// Retrieve the value.
 		String _value = selenium.getAttribute(_attributeLocator);

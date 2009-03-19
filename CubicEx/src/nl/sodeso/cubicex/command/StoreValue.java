@@ -22,8 +22,8 @@ public class StoreValue extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _locator = getTarget();
-		final String _variable = getVariable();
+		final String _locator = getArgTarget();
+		final String _variable = getArgVariable();
 		
 		// Retrieve the value.
 		String _value = selenium.getValue(_locator);

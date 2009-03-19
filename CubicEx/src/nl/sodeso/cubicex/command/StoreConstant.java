@@ -22,10 +22,10 @@ public class StoreConstant extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _variable = getVariable();
-		final String _textToStore = getValue();
+		final String _variable = getArgVariable();
+		final String _textToStore = getArgValue();
 		
-		setStringVariable(_variable, _textToStore);
+		setVariable(_variable, _textToStore);
 	}
 
 }

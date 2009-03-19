@@ -24,7 +24,7 @@ public class VerifyNotChecked extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _locator = getTarget();
+		final String _locator = getArgTarget();
 		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getValue(_locator);

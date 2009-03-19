@@ -23,8 +23,8 @@ public class StoreConfirmation extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final long _timeoutToUse = getTimeout();
-		final String _variable = getVariable();
+		final long _timeoutToUse = getArgTimeout();
+		final String _variable = getArgVariable();
 		
 		new Wait() {
 		  public boolean until() {

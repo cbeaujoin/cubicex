@@ -22,8 +22,8 @@ public class WriteAttribute extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _locator = getTarget();
-		final String _textToWrite = getValue();
+		final String _locator = getArgTarget();
+		final String _textToWrite = getArgValue();
 		
 		selenium.type(_locator, _textToWrite);
 	}

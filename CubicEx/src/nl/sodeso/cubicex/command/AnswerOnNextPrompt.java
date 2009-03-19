@@ -22,7 +22,7 @@ public class AnswerOnNextPrompt extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _textToWrite = getValue();
+		final String _textToWrite = getArgValue();
 		
 		selenium.answerOnNextPrompt(_textToWrite);
 	}

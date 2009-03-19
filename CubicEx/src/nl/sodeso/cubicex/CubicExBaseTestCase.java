@@ -45,7 +45,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the timout or 30000 when no value entered.
 	 */
-	public long getTimeout() {
+	public long getArgTimeout() {
 		String _timeout = arguments.get("timeout");
 		
 		long _timeoutToUse = 30000l;
@@ -64,7 +64,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>value</code> property 
 	 */
-	public String getValue() {
+	public String getArgValue() {
 		String _value = arguments.get("value");
 		if (_value != null && _value.length() > 0) {
 			_value = parseString(_value);
@@ -83,7 +83,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>format</code> property 
 	 */
-	public String getFormat() {
+	public String getArgFormat() {
 		String _format = arguments.get("format");
 		if (_format != null && _format.length() > 0) {
 			_format = parseString(_format);
@@ -102,7 +102,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>deviation</code> property 
 	 */
-	public int getDeviation() {
+	public int getArgDeviation() {
 		String _deviation = arguments.get("deviation");
 		Integer _deviationToUse = 0;
 		if (_deviation != null && _deviation.length() > 0) {
@@ -119,7 +119,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>variable</code> property.
 	 */
-	public String getVariable() {
+	public String getArgVariable() {
 		String _variable = arguments.get("variable");
 		return _variable;
 	}
@@ -131,7 +131,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>target</code> property.
 	 */
-	public String getTarget() {
+	public String getArgTarget() {
 		String _target = arguments.get("target");
 		return _target;
 	}
@@ -144,7 +144,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value of the <code>url</code> property 
 	 */
-	public String getUrl() {
+	public String getArgUrl() {
 		String _url = arguments.get("URL");
 		if (_url != null && _url.length() > 0) {
 			_url = parseString(_url);
@@ -161,7 +161,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * 
 	 * @return the value stored in the context
 	 */
-	public String getStringVariable(String variable) {
+	public String getVariableAsString(String variable) {
 		String result = null;
 		
 		if (variable != null && variable.length() > 0) {
@@ -177,12 +177,100 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @param variable the name of the variable
 	 * @param value the value to store in the context.
 	 */
-	public void setStringVariable(String variable, String value) {
+	public void setVariable(String variable, String value) {
 		if (variable != null && variable.length() > 0) {
 			context.put(variable, value);
 		}
 	}
 	
+	/**
+	 * Retrieves an <code>Integer</code> variable from the context.
+	 * 
+	 * @param variable the name of the variable
+	 * 
+	 * @return the value stored in the context
+	 */
+	public Integer getVariableAsInteger(String variable) {
+		String result = getVariableAsString(variable);
+		
+		Integer returnValue = null;
+		if (result != null && result.length() >0) {
+			try {
+				returnValue = Integer.valueOf(result);
+			} catch (NumberFormatException numberFormatException) {
+				// Log exception, calling test should test if the number is required or not.
+			}
+		}
+		
+		return returnValue;
+	}
+	
+	/**
+	 * Retrieves an <code>Long</code> variable from the context.
+	 * 
+	 * @param variable the name of the variable
+	 * 
+	 * @return the value stored in the context
+	 */
+	public Long getVariableAsLong(String variable) {
+		String result = getVariableAsString(variable);
+		
+		Long returnValue = null;
+		if (result != null && result.length() >0) {
+			try {
+				returnValue = Long.valueOf(result);
+			} catch (NumberFormatException numberFormatException) {
+				// Log exception, calling test should test if the number is required or not.
+			}
+		}
+		
+		return returnValue;
+	}
+	
+	/**
+	 * Retrieves an <code>Double</code> variable from the context.
+	 * 
+	 * @param variable the name of the variable
+	 * 
+	 * @return the value stored in the context
+	 */
+	public Double getVariableAsDouble(String variable) {
+		String result = getVariableAsString(variable);
+		
+		Double returnValue = null;
+		if (result != null && result.length() >0) {
+			try {
+				returnValue = Double.valueOf(result);
+			} catch (NumberFormatException numberFormatException) {
+				// Log exception, calling test should test if the number is required or not.
+			}
+		}
+		
+		return returnValue;
+	}
+	
+	/**
+	 * Retrieves an <code>Float</code> variable from the context.
+	 * 
+	 * @param variable the name of the variable
+	 * 
+	 * @return the value stored in the context
+	 */
+	public Float getVariableAsFloat(String variable) {
+		String result = getVariableAsString(variable);
+		
+		Float returnValue = null;
+		if (result != null && result.length() >0) {
+			try {
+				returnValue = Float.valueOf(result);
+			} catch (NumberFormatException numberFormatException) {
+				// Log exception, calling test should test if the number is required or not.
+			}
+		}
+		
+		return returnValue;
+	}
+		
 	/**
 	 * Parses a String containing variables and returns the parsed string.
 	 * 
@@ -202,7 +290,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			String variable = value.substring(startIndex + "${".length(), endIndex);
 			
 			// Retrieve the variable value from the context.
-			String varValue = getStringVariable(variable);
+			String varValue = getVariableAsString(variable);
 			
 			// Replace the variable with the value from the context.
 			result = result.replace("${" + variable + "}", varValue);
