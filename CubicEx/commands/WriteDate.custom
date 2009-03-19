@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.WriteDate</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WriteValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>WriteDate</name>
+  <description>Writes the date using the specified &lt;format&gt; and calculated &lt;deviation&gt; into the &lt;target&gt;.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>An element locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>(variable sensitive)</description>
+        <key>format</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>(variable sensitive)</description>
+        <key>deviation</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.ChooseOkOnNextConfirmation</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WaitForValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>ChooseOkOnNextConfirmation</name>
+  <description>When the next confirmation window pops up it will choose OK.Waits for a confirmation dialog to appear.Waits for the given &lt;target&gt; to become present.Waits for the given &lt;&lt;value&gt; (or stored memory &lt;variable&gt;) to popup in the the specified &lt;target&gt;, timeout will occure after &lt;timeout&gt; milliseconds.</description>
+  <parameters>
+    <parameters/>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>

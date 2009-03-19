@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.WriteOnNextPrompt</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WriteValue.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>WriteOnNextPrompt</name>
+  <description>Instructs selenium to enter the &lt;value&gt; as the anweser in the next prompt.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>(variable sensitive)</description>
+        <key>value</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
