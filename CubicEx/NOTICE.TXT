@@ -1,0 +1,5 @@
+CubicEx
+Copyright 2009 Sodeso
+
+This library includes software developed by
+Sodeso (http://www.sodeso.nl/).
