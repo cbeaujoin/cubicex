@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyChecked</name>
+  <name>AssertVisible</name>
   <description>Asserts that the specified &lt;target&gt; is visible.</description>
   <parameters>
     <parameters>

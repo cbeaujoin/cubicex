@@ -4,15 +4,19 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.cubicex.command.VerifyTitle</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/VerifyTitle.java</path>
+        <displayText>nl.sodeso.cubicex.command.VerifyNotText</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/VerifyNotText.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyTitle</name>
-  <description>Verifies the title of the page is the same as the value specified.</description>
+  <name>VerifyNotText</name>
+  <description>Verifies the text of the target is not the same as the the value specified.</description>
   <parameters>
     <parameters>
+      <customTestStepParameter>
+        <description>An element locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
       <customTestStepParameter>
         <description>(variable sensitive)</description>
         <key>value</key>

@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyChecked</name>
+  <name>AssertNotEditable</name>
   <description>Asserts that the specified &lt;target&gt; is not editable.</description>
   <parameters>
     <parameters>

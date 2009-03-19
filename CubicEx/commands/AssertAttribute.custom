@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>AssertText</name>
+  <name>AssertAttribute</name>
   <description>Asserts the value of the &lt;target&gt; attribute against the value specified.</description>
   <parameters>
     <parameters>

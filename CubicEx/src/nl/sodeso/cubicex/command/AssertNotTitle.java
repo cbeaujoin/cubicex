@@ -26,7 +26,7 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>assertTitle</code> command of SeleniumIDE
+ * Replaces the <code>assertNotTitle</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.2
@@ -43,7 +43,7 @@ public class AssertNotTitle extends CubicExBaseTestCase {
 		final String _valueToCompareTo = getArgValue();
 
 		if (log.isInfoEnabled()) {
-			log.info("AssertTitle: value '" + _valueToCompareTo + "'.");
+			log.info("AssertNotTitle: value '" + _valueToCompareTo + "'.");
 		}
 		
 		// Retrieve the field value.

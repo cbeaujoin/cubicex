@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyNotChecked</name>
+  <name>AssertNotChecked</name>
   <description>Asserts that the specified &lt;target&gt; (checkbox / radiobutton) is not checked.</description>
   <parameters>
     <parameters>

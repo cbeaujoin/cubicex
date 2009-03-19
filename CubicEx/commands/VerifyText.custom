@@ -10,7 +10,7 @@
     </entry>
   </customSteps>
   <name>VerifyText</name>
-  <description>Verifies the value of the target against the value specified.</description>
+  <description>Verifies the text of the target is the same as the the value specified.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>

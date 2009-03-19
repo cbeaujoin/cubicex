@@ -48,7 +48,7 @@ public class VerifyText extends CubicExBaseTestCase {
 		}
 		
 		// Retrieve the field value.
-		String _valueOfField = selenium.getValue(_locator);
+		String _valueOfField = selenium.getText(_locator);
 		verifyEquals(_valueOfField, _valueToCompareTo);
 	}
 

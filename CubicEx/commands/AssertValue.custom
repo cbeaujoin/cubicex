@@ -4,15 +4,19 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.cubicex.command.VerifyTitle</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/VerifyTitle.java</path>
+        <displayText>nl.sodeso.cubicex.command.AssertValue</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertValue.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyTitle</name>
-  <description>Verifies the title of the page is the same as the value specified.</description>
+  <name>AssertValue</name>
+  <description>Asserts the value of the target is the same as the value specified.</description>
   <parameters>
     <parameters>
+      <customTestStepParameter>
+        <description>An element locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
       <customTestStepParameter>
         <description>(variable sensitive)</description>
         <key>value</key>

@@ -26,14 +26,14 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>assertText</code> command of SeleniumIDE
+ * Replaces the <code>VerifyNotText</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class AssertText extends CubicExBaseTestCase {
+public class VerifyNotText extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(AssertText.class);
+	private Log log = LogFactory.getLog(VerifyNotText.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -42,14 +42,14 @@ public class AssertText extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
 		final String _valueToCompareTo = getArgValue();
-		
+
 		if (log.isInfoEnabled()) {
-			log.info("AssertText: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
+			log.info("VerifyNotText: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
 		}
 		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getText(_locator);
-		assertEquals(_valueToCompareTo, _valueOfField);
+		verifyNotEquals(_valueOfField, _valueToCompareTo);
 	}
 
 }

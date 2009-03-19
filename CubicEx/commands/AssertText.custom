@@ -10,7 +10,7 @@
     </entry>
   </customSteps>
   <name>AssertText</name>
-  <description>Asserts the value of the target against the value specified.</description>
+  <description>Asserts the text of the target is the same as the value specified.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>

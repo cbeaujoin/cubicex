@@ -43,7 +43,7 @@ public class VerifyNotTitle extends CubicExBaseTestCase {
 		final String _valueToCompareTo = getArgValue();
 
 		if (log.isInfoEnabled()) {
-			log.info("VerifyTitle: value '" + _valueToCompareTo + "'.");
+			log.info("VerifyNotTitle: value '" + _valueToCompareTo + "'.");
 		}
 		
 		// Retrieve the field value.

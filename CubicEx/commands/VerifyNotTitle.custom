@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyText</name>
+  <name>VerifyNotTitle</name>
   <description>Verifies the title of the page is not the same as the value specified.</description>
   <parameters>
     <parameters>

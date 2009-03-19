@@ -9,7 +9,7 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyChecked</name>
+  <name>AssertChecked</name>
   <description>Asserts that the specified &lt;target&gt; (checkbox / radiobutton) is checked.</description>
   <parameters>
     <parameters>

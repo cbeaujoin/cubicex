@@ -4,12 +4,12 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.cubicex.command.AssertTitle</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertTitle.java</path>
+        <displayText>nl.sodeso.cubicex.command.AssertNotTitle</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertNotTitle.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyText</name>
+  <name>AssertNotTitle</name>
   <description>Asserts the title of the page is not the same as the value specified.</description>
   <parameters>
     <parameters>
