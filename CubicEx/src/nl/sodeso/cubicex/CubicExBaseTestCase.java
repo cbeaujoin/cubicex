@@ -15,7 +15,7 @@ import com.thoughtworks.selenium.Selenium;
  * @version 0.0.2
  */
 public abstract class CubicExBaseTestCase extends SeleneseTestCase implements ICustomTestStep {
-
+	
 	private Map<String, String> arguments = null;
 	private IElementContext context = null;
 	
@@ -30,11 +30,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
-	 * 
-	 * @param arguments
-	 * @param context
-	 * @param selenium
-	 * @throws Exception
+	 * @see ICustomTestStep#execute(Map, IElementContext, Selenium)
 	 */
 	public abstract void executeTest(Map<String, String> arguments, IElementContext context, Selenium selenium) throws Exception;
 	

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -17,6 +19,8 @@ import com.thoughtworks.selenium.Wait;
  */
 public class WaitForValue extends CubicExBaseTestCase {
 
+	private Log log = LogFactory.getLog(WaitForValue.class);
+	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -26,6 +30,10 @@ public class WaitForValue extends CubicExBaseTestCase {
 		final String _locator = getArgTarget();
 		final String _valueToCompareTo = getArgValue();
 		final long _timeoutToUse = getArgTimeout();
+		
+		if (log.isInfoEnabled()) {
+			log.info("WaitForValue: target '" + _locator + "', value '" + _valueToCompareTo + "', timeout '" + _timeoutToUse + "'.");
+		}
 		
 		new Wait() {
 		  public boolean until() {

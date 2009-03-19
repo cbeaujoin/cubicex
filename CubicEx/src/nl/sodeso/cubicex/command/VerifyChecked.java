@@ -2,10 +2,10 @@ package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
-import junit.framework.Assert;
-
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -18,19 +18,24 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class VerifyChecked extends CubicExBaseTestCase {
 
+	private Log log = LogFactory.getLog(VerifyChecked.class);
+	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
+		
+		if (log.isInfoEnabled()) {
+			log.info("VerifyChecked: target '" + _locator + "'.");
+		}
 		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getValue(_locator);
 		
 		// Check if the value is "on"
-		Assert.assertEquals("on", _valueOfField);
+		verifyEquals("on", _valueOfField);
 	}
 
 }

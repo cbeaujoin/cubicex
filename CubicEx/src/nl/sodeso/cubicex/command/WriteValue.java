@@ -4,6 +4,8 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -16,6 +18,8 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class WriteValue extends CubicExBaseTestCase {
 
+	private Log log = LogFactory.getLog(WriteValue.class);
+	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -24,6 +28,10 @@ public class WriteValue extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
 		final String _textToWrite = getArgValue();
+		
+		if (log.isInfoEnabled()) {
+			log.info("WriteValue: target '" + _locator + "', value '" + _textToWrite + "'.");
+		}
 		
 		selenium.type(_locator, _textToWrite);
 	}

@@ -6,6 +6,8 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -18,6 +20,8 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class WriteDate extends CubicExBaseTestCase {
 
+	private Log log = LogFactory.getLog(WriteDate.class);
+	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -27,6 +31,11 @@ public class WriteDate extends CubicExBaseTestCase {
 		final String _locator = getArgTarget();
 		final String _format = getArgFormat();
 		final Integer _deviation = getArgDeviation();
+		
+		if (log.isInfoEnabled()) {
+			log.info("WriteDate: target '" + _locator + "', format '" + _format + "', deviation '" + _deviation + "'.");
+		}
+
 		
 		// Process the deviation
 		Calendar calendar = Calendar.getInstance();
