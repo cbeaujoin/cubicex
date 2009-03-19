@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -10,12 +10,12 @@ import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.Wait;
 
 /**
- * Replaces the <code>storePrompt</code> command of SeleniumIDE
+ * Replaces the <code>waitForElementPresent</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class StorePrompt extends CubicExBaseTestCase {
+public class WaitForElementPresent extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -23,21 +23,14 @@ public class StorePrompt extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
+		final String _locator = getTarget();
 		final long _timeoutToUse = getTimeout();
-		final String _variable = getVariable();
 		
 		new Wait() {
 		  public boolean until() {
-			 boolean isExpectedPromptPresent = false;
-			 if (selenium.isPromptPresent()) {
-				 String _promptMessage = selenium.getPrompt();
-				 context.put(_variable, _promptMessage);
-				 isExpectedPromptPresent = true;
-			 }
-			 
-			 return isExpectedPromptPresent;
+			 return selenium.isElementPresent(_locator);
 		  }
-		}.wait("Prompt window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);	
+		}.wait("Element not found as expected target = '" + _locator + "'", _timeoutToUse);		
 	}
 
 }

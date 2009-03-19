@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -10,12 +10,12 @@ import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.Wait;
 
 /**
- * Replaces the <code>storeAlert</code> command of SeleniumIDE
+ * Replaces the <code>storeConfirmation</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class StoreAlert extends CubicExBaseTestCase {
+public class StoreConfirmation extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -28,17 +28,16 @@ public class StoreAlert extends CubicExBaseTestCase {
 		
 		new Wait() {
 		  public boolean until() {
-			 boolean isExpectedAlertPresent = false;
-			 if (selenium.isAlertPresent()) {
-				 String _alertMessage = selenium.getAlert();
-				 context.put(_variable, _alertMessage);
-
-				 isExpectedAlertPresent = true;
+			 boolean isExpectedConfirmationPresent = false;
+			 if (selenium.isConfirmationPresent()) {
+				 String _confirmationMessage = selenium.getConfirmation();
+				 context.put(_variable, _confirmationMessage);
+				 isExpectedConfirmationPresent = true;
 			 }
 			 
-			 return isExpectedAlertPresent;
+			 return isExpectedConfirmationPresent;
 		  }
-		}.wait("Alert window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);
+		}.wait("Confirmation window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);	
 	}
 
 }

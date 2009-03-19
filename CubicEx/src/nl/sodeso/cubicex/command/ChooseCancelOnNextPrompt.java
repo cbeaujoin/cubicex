@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 

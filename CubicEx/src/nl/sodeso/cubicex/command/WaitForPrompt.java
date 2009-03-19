@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -11,12 +11,12 @@ import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.Wait;
 
 /**
- * Replaces the <code>waitForElementPresent</code> command of SeleniumIDE
+ * Replaces the <code>waitForPromPt</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class WaitForConfirmation extends CubicExBaseTestCase {
+public class WaitForPrompt extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -29,22 +29,22 @@ public class WaitForConfirmation extends CubicExBaseTestCase {
 		
 		new Wait() {
 		  public boolean until() {
-			 boolean isExpectedConfirmationPresent = false;
-			 if (selenium.isConfirmationPresent()) {
+			 boolean isExpectedPromptPresent = false;
+			 if (selenium.isPromptPresent()) {
 				 if (_valueToCompareTo != null && _valueToCompareTo.length() > 0) {
-					 String _confirmationMessage = selenium.getConfirmation();
-					 Assert.assertEquals(_valueToCompareTo, _confirmationMessage);
+					 String _promptMessage = selenium.getPrompt();
+					 Assert.assertEquals(_valueToCompareTo, _promptMessage);
 				 } else {
-					 // We need to consume the confirmation otherwise
+					 // We need to consume the prompt otherwise
 					 // the next step will fail.
-					 selenium.getConfirmation();
+					 selenium.getPrompt();
 				 }
-				 isExpectedConfirmationPresent = true;
+				 isExpectedPromptPresent = true;
 			 }
 			 
-			 return isExpectedConfirmationPresent;
+			 return isExpectedPromptPresent;
 		  }
-		}.wait("Confirmation window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);		
+		}.wait("Prompt window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);		
 	}
 
 }

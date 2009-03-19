@@ -1,8 +1,7 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
-import junit.framework.Assert;
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
 import org.cubictest.selenium.custom.IElementContext;
@@ -11,12 +10,12 @@ import com.thoughtworks.selenium.Selenium;
 import com.thoughtworks.selenium.Wait;
 
 /**
- * Replaces the <code>waitForPromPt</code> command of SeleniumIDE
+ * Replaces the <code>storePrompt</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class WaitForPrompt extends CubicExBaseTestCase {
+public class StorePrompt extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -24,27 +23,21 @@ public class WaitForPrompt extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _valueToCompareTo = getValue();
 		final long _timeoutToUse = getTimeout();
+		final String _variable = getVariable();
 		
 		new Wait() {
 		  public boolean until() {
 			 boolean isExpectedPromptPresent = false;
 			 if (selenium.isPromptPresent()) {
-				 if (_valueToCompareTo != null && _valueToCompareTo.length() > 0) {
-					 String _promptMessage = selenium.getPrompt();
-					 Assert.assertEquals(_valueToCompareTo, _promptMessage);
-				 } else {
-					 // We need to consume the prompt otherwise
-					 // the next step will fail.
-					 selenium.getPrompt();
-				 }
+				 String _promptMessage = selenium.getPrompt();
+				 context.put(_variable, _promptMessage);
 				 isExpectedPromptPresent = true;
 			 }
 			 
 			 return isExpectedPromptPresent;
 		  }
-		}.wait("Prompt window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);		
+		}.wait("Prompt window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);	
 	}
 
 }

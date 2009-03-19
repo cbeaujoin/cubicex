@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -9,18 +9,22 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>chooseCancelOnNextConfirmation</code> command of SeleniumIDE
+ * Command to fire a URL event.
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class ChooseCancelOnNextConfirmation extends CubicExBaseTestCase {
+public class FireLinkEvent extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-		selenium.chooseCancelOnNextConfirmation();		
+
+		// Retrieve the parameters.
+		final String _url = getUrl();
+		
+		selenium.open(_url);
 	}
 
 }

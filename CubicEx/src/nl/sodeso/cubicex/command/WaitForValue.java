@@ -1,6 +1,8 @@
-package nl.sodeso.cubicex;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
+
+import nl.sodeso.cubicex.CubicExBaseTestCase;
 
 import org.cubictest.selenium.custom.IElementContext;
 

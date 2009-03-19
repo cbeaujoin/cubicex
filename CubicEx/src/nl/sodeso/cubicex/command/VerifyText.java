@@ -1,8 +1,9 @@
-package nl.sodeso.cubicex;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
-import junit.framework.Assert;
+import nl.sodeso.cubicex.CubicExBaseTestCase;
+import nl.sodeso.cubicex.exception.VerifyException;
 
 import org.cubictest.selenium.custom.IElementContext;
 
@@ -14,7 +15,7 @@ import com.thoughtworks.selenium.Selenium;
  * @author r.mathies
  * @version 0.0.1
  */
-public class VerifyChecked extends CubicExBaseTestCase {
+public class VerifyText extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -23,12 +24,15 @@ public class VerifyChecked extends CubicExBaseTestCase {
 
 		// Retrieve the parameters.
 		final String _locator = getTarget();
+		final String _valueToCompareTo = getValue();
 		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getValue(_locator);
 		
-		// Check if the value is "on"
-		Assert.assertEquals("on", _valueOfField);
+		// Compare value against field value
+		if (!_valueOfField.equals(_valueToCompareTo)) {
+			throw new VerifyException("Value not found as expected target = '" + _locator + "', value = '" + _valueToCompareTo + "'");
+		}
 	}
 
 }

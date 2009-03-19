@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -9,12 +9,12 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>answerOnNextPrompt</code> command of SeleniumIDE
+ * Replaces the <code>storeValue</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.2
+ * @version 0.0.1
  */
-public class AnswerOnNextPrompt extends CubicExBaseTestCase {
+public class StoreValue extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
@@ -22,9 +22,14 @@ public class AnswerOnNextPrompt extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 
 		// Retrieve the parameters.
-		final String _textToWrite = getValue();
+		final String _locator = getTarget();
+		final String _variable = getVariable();
 		
-		selenium.answerOnNextPrompt(_textToWrite);
+		// Retrieve the value.
+		String _value = selenium.getValue(_locator);
+		
+		// Store the value.
+		context.put(_variable, _value);
 	}
 
 }

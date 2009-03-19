@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -9,12 +9,12 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Adds the <code>ChooseOkOnNextPrompt</code> command
+ * Replaces the <code>ChooseOkOnNextConfirmation</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.1
  */
-public class ChooseOkOnNextPrompt extends CubicExBaseTestCase {
+public class ChooseOkOnNextConfirmation extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}

@@ -1,4 +1,4 @@
-package nl.sodeso.cubicex.dialog;
+package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
@@ -9,18 +9,22 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>ChooseOkOnNextConfirmation</code> command of SeleniumIDE
+ * Replaces the <code>answerOnNextPrompt</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @version 0.0.2
  */
-public class ChooseOkOnNextConfirmation extends CubicExBaseTestCase {
+public class AnswerOnNextPrompt extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-		selenium.chooseOkOnNextConfirmation();		
+
+		// Retrieve the parameters.
+		final String _textToWrite = getValue();
+		
+		selenium.answerOnNextPrompt(_textToWrite);
 	}
 
 }
