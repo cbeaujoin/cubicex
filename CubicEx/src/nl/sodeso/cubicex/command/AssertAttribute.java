@@ -11,27 +11,30 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>answerOnNextPrompt</code> command of SeleniumIDE
+ * Replaces the <code>AssertAttribute</code> command of SeleniumIDE
  * 
  * @author r.mathies
  * @version 0.0.2
  */
-public class AnswerOnNextPrompt extends CubicExBaseTestCase {
+public class AssertAttribute extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(AnswerOnNextPrompt.class);
+	private Log log = LogFactory.getLog(AssertAttribute.class);
 	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _textToWrite = getArgValue();
+		final String _locator = getArgTarget();
+		final String _valueToCompareTo = getArgValue();
 
 		if (log.isInfoEnabled()) {
-			log.info("AnswerOnNextPrompt: value '" + _textToWrite + "'.");
+			log.info("AssertAttribute: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
 		}
 		
-		selenium.answerOnNextPrompt(_textToWrite);
+		// Retrieve the field value.
+		String _valueOfField = selenium.getAttribute(_locator);
+		assertEquals(_valueOfField, _valueToCompareTo);
 	}
 
 }

@@ -11,29 +11,27 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Replaces the <code>type</code> command of SeleniumIDE
+ * Replaces the <code>VerifyEditable</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @version 0.0.2
  */
-public class WriteAttribute extends CubicExBaseTestCase {
+public class VerifyEditable extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(VerifyText.class);
+	private Log log = LogFactory.getLog(VerifyEditable.class);
 	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
-		final String _textToWrite = getArgValue();
 		
 		if (log.isInfoEnabled()) {
-			log.info("WaitForValue: target '" + _locator + "', value '" + _textToWrite + "'.");
+			log.info("VerifyEditable: target '" + _locator + "'.");
 		}
-		
-		selenium.type(_locator, _textToWrite);
+
+		verifyTrue(selenium.isEditable(_locator));	
 	}
 
 }

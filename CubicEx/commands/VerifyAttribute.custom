@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.VerifyAttribute</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/VerifyAttribute.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>AssertText</name>
+  <description>Verifies the value of the &lt;target&gt; attribute against the value specified.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>An attribute locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>(variable sensitive)</description>
+        <key>value</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
