@@ -25,7 +25,7 @@
               </customTestStepParameter>
               <CustomTestStepValue>
                 <parameter reference="../../customTestStepParameter"/>
-                <value>This columns contains text.</value>
+                <value>This text should be asserted not correctly.</value>
               </CustomTestStepValue>
             </entry>
           </values>
@@ -36,20 +36,127 @@
               <end class="page">
                 <children/>
                 <commons/>
-                <elements/>
+                <elements>
+                  <textField>
+                    <description></description>
+                    <identifiers>
+                      <identifier>
+                        <value></value>
+                        <probability>0</probability>
+                        <type>LABEL</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator>EQUAL</moderator>
+                      </identifier>
+                      <identifier>
+                        <value>input_no_text_1_id</value>
+                        <probability>100</probability>
+                        <type>ID</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value>input_no_text_1_name</value>
+                        <probability>0</probability>
+                        <type>NAME</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value></value>
+                        <probability>0</probability>
+                        <type>VALUE</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value></value>
+                        <probability>0</probability>
+                        <type>TITLE</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../identifier/moderator"/>
+                      </identifier>
+                    </identifiers>
+                    <directEditIdentifier reference="../identifiers/identifier[2]"/>
+                    <not>false</not>
+                    <status>UNKNOWN</status>
+                  </textField>
+                  <link>
+                    <description></description>
+                    <identifiers>
+                      <identifier>
+                        <value>Go to the next page.</value>
+                        <probability>100</probability>
+                        <type reference="../../../../textField/identifiers/identifier/type"/>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../../../textField/identifiers/identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value>url_next_page_id</value>
+                        <probability>0</probability>
+                        <type reference="../../../../textField/identifiers/identifier[2]/type"/>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../../../textField/identifiers/identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value>End.html</value>
+                        <probability>0</probability>
+                        <type>HREF</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../../../textField/identifiers/identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value></value>
+                        <probability>0</probability>
+                        <type reference="../../../../textField/identifiers/identifier[5]/type"/>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../../../textField/identifiers/identifier/moderator"/>
+                      </identifier>
+                      <identifier>
+                        <value></value>
+                        <probability>0</probability>
+                        <type>CLASS</type>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                        <moderator reference="../../../../textField/identifiers/identifier/moderator"/>
+                      </identifier>
+                    </identifiers>
+                    <directEditIdentifier reference="../identifiers/identifier"/>
+                    <not>false</not>
+                    <status reference="../../textField/status"/>
+                  </link>
+                </elements>
                 <name>Start Page</name>
                 <description></description>
                 <inTransition class="simpleTransition" reference="../.."/>
                 <outTransitions>
                   <userInteractionsTransition>
-                    <userInteractions/>
+                    <userInteractions>
+                      <userInteraction>
+                        <element class="textField" reference="../../../../../elements/textField"/>
+                        <input>This text should be asserted correctly.</input>
+                        <action>ENTER_TEXT</action>
+                        <i18nKey></i18nKey>
+                        <paramKey></paramKey>
+                        <useI18n>false</useI18n>
+                        <useParam>false</useParam>
+                      </userInteraction>
+                    </userInteractions>
                     <page class="page" reference="../../.."/>
                     <secondsToWaitForResult>5</secondsToWaitForResult>
                     <name></name>
                     <hasCustomTimeout>false</hasCustomTimeout>
                     <start class="page" reference="../../.."/>
                     <end class="customTestStep">
-                      <file>commands/AssertText.custom</file>
+                      <file>commands/AssertNotValue.custom</file>
                       <values>
                         <entry>
                           <customTestStepParameter>
@@ -58,7 +165,7 @@
                           </customTestStepParameter>
                           <CustomTestStepValue>
                             <parameter reference="../../customTestStepParameter"/>
-                            <value>id=td__with_text_id</value>
+                            <value>id=input_no_text_1_id</value>
                           </CustomTestStepValue>
                         </entry>
                         <entry>
@@ -68,7 +175,7 @@
                           </customTestStepParameter>
                           <CustomTestStepValue>
                             <parameter reference="../../customTestStepParameter"/>
-                            <value>This columns contains text.</value>
+                            <value>This text should be asserted not correctly.</value>
                           </CustomTestStepValue>
                         </entry>
                       </values>
@@ -77,7 +184,7 @@
                         <simpleTransition>
                           <start class="customTestStep" reference="../../.."/>
                           <end class="customTestStep">
-                            <file>commands/AssertText.custom</file>
+                            <file>commands/AssertNotValue.custom</file>
                             <values>
                               <entry>
                                 <customTestStepParameter>
@@ -86,7 +193,7 @@
                                 </customTestStepParameter>
                                 <CustomTestStepValue>
                                   <parameter reference="../../customTestStepParameter"/>
-                                  <value>id=td__with_text_id</value>
+                                  <value>id=input_no_text_1_id</value>
                                 </CustomTestStepValue>
                               </entry>
                               <entry>
@@ -114,47 +221,47 @@
                                         <identifier>
                                           <value>Go to the next page.</value>
                                           <probability>100</probability>
-                                          <type>LABEL</type>
+                                          <type reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/type"/>
                                           <useI18n>false</useI18n>
                                           <useParam>false</useParam>
-                                          <moderator>EQUAL</moderator>
+                                          <moderator reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/moderator"/>
                                         </identifier>
                                         <identifier>
                                           <value>url_next_page_id</value>
                                           <probability>0</probability>
-                                          <type>ID</type>
+                                          <type reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier[2]/type"/>
                                           <useI18n>false</useI18n>
                                           <useParam>false</useParam>
-                                          <moderator reference="../../identifier/moderator"/>
+                                          <moderator reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/moderator"/>
                                         </identifier>
                                         <identifier>
                                           <value>End.html</value>
                                           <probability>0</probability>
-                                          <type>HREF</type>
+                                          <type reference="../../../../../../../../../../../../../../elements/link/identifiers/identifier[3]/type"/>
                                           <useI18n>false</useI18n>
                                           <useParam>false</useParam>
-                                          <moderator reference="../../identifier/moderator"/>
+                                          <moderator reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/moderator"/>
                                         </identifier>
                                         <identifier>
                                           <value></value>
                                           <probability>0</probability>
-                                          <type>TITLE</type>
+                                          <type reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier[5]/type"/>
                                           <useI18n>false</useI18n>
                                           <useParam>false</useParam>
-                                          <moderator reference="../../identifier/moderator"/>
+                                          <moderator reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/moderator"/>
                                         </identifier>
                                         <identifier>
                                           <value></value>
                                           <probability>0</probability>
-                                          <type>CLASS</type>
+                                          <type reference="../../../../../../../../../../../../../../elements/link/identifiers/identifier[5]/type"/>
                                           <useI18n>false</useI18n>
                                           <useParam>false</useParam>
-                                          <moderator reference="../../identifier/moderator"/>
+                                          <moderator reference="../../../../../../../../../../../../../../elements/textField/identifiers/identifier/moderator"/>
                                         </identifier>
                                       </identifiers>
                                       <directEditIdentifier reference="../identifiers/identifier"/>
                                       <not>false</not>
-                                      <status>UNKNOWN</status>
+                                      <status reference="../../../../../../../../../../../../elements/textField/status"/>
                                     </link>
                                   </elements>
                                   <name>Start Page</name>
@@ -188,8 +295,8 @@
                                         <outTransitions/>
                                         <id>page175040101237271767477</id>
                                         <position>
-                                          <x>45</x>
-                                          <y>371</y>
+                                          <x>47</x>
+                                          <y>434</y>
                                         </position>
                                         <dimension>
                                           <width>115</width>
@@ -201,8 +308,8 @@
                                   </outTransitions>
                                   <id>page226983141237272112282</id>
                                   <position>
-                                    <x>35</x>
-                                    <y>288</y>
+                                    <x>37</x>
+                                    <y>351</y>
                                   </position>
                                   <dimension>
                                     <width>135</width>
@@ -214,21 +321,21 @@
                             </outTransitions>
                             <id>customteststepholder192280911237271894995</id>
                             <position>
-                              <x>59</x>
-                              <y>229</y>
+                              <x>62</x>
+                              <y>292</y>
                             </position>
                             <name></name>
-                            <status reference="../outTransitions/simpleTransition/end/elements/link/status"/>
+                            <status reference="../../../../../../../elements/textField/status"/>
                           </end>
                         </simpleTransition>
                       </outTransitions>
                       <id>customteststepholder294288991237271798868</id>
                       <position>
-                        <x>60</x>
-                        <y>177</y>
+                        <x>63</x>
+                        <y>240</y>
                       </position>
                       <name></name>
-                      <status>FAIL</status>
+                      <status reference="../../../../elements/textField/status"/>
                     </end>
                   </userInteractionsTransition>
                 </outTransitions>
@@ -239,7 +346,7 @@
                 </position>
                 <dimension>
                   <width>135</width>
-                  <height>22</height>
+                  <height>66</height>
                 </dimension>
                 <name defined-in="transitionNode"></name>
               </end>
@@ -251,7 +358,7 @@
             <y>66</y>
           </position>
           <name></name>
-          <status>PASS</status>
+          <status reference="../outTransitions/simpleTransition/end/elements/textField/status"/>
         </end>
       </simpleTransition>
     </outTransitions>
@@ -560,10 +667,28 @@
       <name></name>
       <description></description>
       <outTransitions/>
-      <id>page278266101237561427237</id>
+      <id>page184998861237555508320</id>
       <position>
         <x>0</x>
         <y>5200</y>
+      </position>
+      <dimension>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <name defined-in="transitionNode"></name>
+    </page>
+    <page>
+      <children/>
+      <commons/>
+      <elements/>
+      <name></name>
+      <description></description>
+      <outTransitions/>
+      <id>page321968371237561747714</id>
+      <position>
+        <x>0</x>
+        <y>5500</y>
       </position>
       <dimension>
         <width>0</width>
@@ -590,8 +715,8 @@
     <languages/>
     <observers/>
   </allLanguages>
-  <name>AssertText</name>
-  <description>Test for testing the AssertText command.</description>
+  <name>AssertNotValue</name>
+  <description>Test for testing the AssertNotValue command.</description>
   <id>test1236710165059</id>
   <modelVersion>10</modelVersion>
 </test>
