@@ -1,1 +1,1 @@
-java -cp bin nl.sodeso.cubicex.server.NanoHTTPD 80 .
+java -cp NanoHTTPd.1.11.jar nl.sodeso.cubicex.server.NanoHTTPD 80 .
