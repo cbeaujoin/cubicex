@@ -123,7 +123,7 @@
                             <id>page175040101237271767477</id>
                             <position>
                               <x>47</x>
-                              <y>324</y>
+                              <y>254</y>
                             </position>
                             <dimension>
                               <width>115</width>
@@ -136,7 +136,7 @@
                       <id>page226983141237272112282</id>
                       <position>
                         <x>37</x>
-                        <y>241</y>
+                        <y>171</y>
                       </position>
                       <dimension>
                         <width>135</width>
@@ -149,7 +149,7 @@
                 <id>customteststepholder203129011237554305320</id>
                 <position>
                   <x>50</x>
-                  <y>190</y>
+                  <y>120</y>
                 </position>
                 <name></name>
                 <status reference="../outTransitions/simpleTransition/end/elements/link/status"/>
@@ -159,7 +159,7 @@
           <id>page71053781236788402459</id>
           <position>
             <x>36</x>
-            <y>116</y>
+            <y>64</y>
           </position>
           <dimension>
             <width>135</width>
@@ -549,6 +549,24 @@
       <position>
         <x>0</x>
         <y>6400</y>
+      </position>
+      <dimension>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <name defined-in="transitionNode"></name>
+    </page>
+    <page>
+      <children/>
+      <commons/>
+      <elements/>
+      <name></name>
+      <description></description>
+      <outTransitions/>
+      <id>page172150071237792315430</id>
+      <position>
+        <x>0</x>
+        <y>6700</y>
       </position>
       <dimension>
         <width>0</width>

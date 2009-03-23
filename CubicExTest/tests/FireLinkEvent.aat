@@ -55,7 +55,7 @@
               </identifiers>
               <directEditIdentifier reference="../identifiers/identifier[2]"/>
               <not>false</not>
-              <status>PASS</status>
+              <status>UNKNOWN</status>
             </textField>
           </elements>
           <name>Start Page</name>
@@ -218,17 +218,17 @@
                                   <id>customteststepholder186604991237359123906</id>
                                   <position>
                                     <x>60</x>
-                                    <y>368</y>
+                                    <y>327</y>
                                   </position>
                                   <name></name>
-                                  <status>FAIL</status>
+                                  <status reference="../../../../../../../../../../../../../elements/textField/status"/>
                                 </end>
                               </userInteractionsTransition>
                             </outTransitions>
                             <id>page175040101237271767477</id>
                             <position>
                               <x>45</x>
-                              <y>296</y>
+                              <y>255</y>
                             </position>
                             <dimension>
                               <width>115</width>
@@ -241,7 +241,7 @@
                       <id>customteststepholder117847451237357067823</id>
                       <position>
                         <x>54</x>
-                        <y>244</y>
+                        <y>203</y>
                       </position>
                       <name></name>
                       <status reference="../../../../../../../elements/textField/status"/>
@@ -251,7 +251,7 @@
                 <id>customteststepholder195789961237357094229</id>
                 <position>
                   <x>52</x>
-                  <y>193</y>
+                  <y>152</y>
                 </position>
                 <name></name>
                 <status reference="../../../../elements/textField/status"/>
@@ -261,7 +261,7 @@
           <id>page71053781236788402459</id>
           <position>
             <x>36</x>
-            <y>116</y>
+            <y>75</y>
           </position>
           <dimension>
             <width>135</width>
@@ -669,6 +669,24 @@
       <position>
         <x>0</x>
         <y>6700</y>
+      </position>
+      <dimension>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <name defined-in="transitionNode"></name>
+    </page>
+    <page>
+      <children/>
+      <commons/>
+      <elements/>
+      <name></name>
+      <description></description>
+      <outTransitions/>
+      <id>page170034331237792232490</id>
+      <position>
+        <x>0</x>
+        <y>7000</y>
       </position>
       <dimension>
         <width>0</width>

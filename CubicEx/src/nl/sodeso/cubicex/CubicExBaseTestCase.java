@@ -52,8 +52,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	/**
 	 * Retrieves the <code>timeout</code> property.
 	 * 
-	 * @param arguments the arguments
-	 * 
 	 * @return the value of the timout or 30000 when no value entered.
 	 */
 	public long getArgTimeout() {
@@ -70,8 +68,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	/**
 	 * Retrieves the <code>value</code> property and it will parse it for any
 	 * variables defined in the value.
-	 * 
-	 * @param arguments the arguments
 	 * 
 	 * @return the value of the <code>value</code> property 
 	 */
@@ -90,8 +86,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * Retrieves the <code>format</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
-	 * @param arguments the arguments
-	 * 
 	 * @return the value of the <code>format</code> property 
 	 */
 	public String getArgFormat() {
@@ -109,8 +103,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * Retrieves the <code>deviation</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
-	 * @param arguments the arguments
-	 * 
 	 * @return the value of the <code>deviation</code> property 
 	 */
 	public int getArgDeviation() {
@@ -125,20 +117,26 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	
 	/**
 	 * Retrieves the <code>variable</code> property.
-	 * 
-	 * @param arguments the arguments
-	 * 
+	 *
 	 * @return the value of the <code>variable</code> property.
 	 */
 	public String getArgVariable() {
 		String _variable = arguments.get("variable");
 		return _variable;
 	}
+
+	/**
+	 * Retrieves the <code>expression</code> property.
+	 * 
+	 * @return the value of the <code>expression</code> property.
+	 */
+	public String getArgExpression() {
+		String _variable = arguments.get("expression");
+		return _variable;
+	}
 	
 	/**
 	 * Retrieves the <code>target</code> property.
-	 * 
-	 * @param arguments the arguments
 	 * 
 	 * @return the value of the <code>target</code> property.
 	 */
@@ -150,8 +148,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	/**
 	 * Retrieves the <code>url</code> property and it will parse it for any
 	 * variables defined in the value.
-	 * 
-	 * @param arguments the arguments
 	 * 
 	 * @return the value of the <code>url</code> property 
 	 */

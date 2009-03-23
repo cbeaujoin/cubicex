@@ -189,7 +189,7 @@
                                         <id>page175040101237271767477</id>
                                         <position>
                                           <x>43</x>
-                                          <y>371</y>
+                                          <y>352</y>
                                         </position>
                                         <dimension>
                                           <width>115</width>
@@ -202,7 +202,7 @@
                                   <id>page226983141237272112282</id>
                                   <position>
                                     <x>33</x>
-                                    <y>288</y>
+                                    <y>269</y>
                                   </position>
                                   <dimension>
                                     <width>135</width>
@@ -215,7 +215,7 @@
                             <id>customteststepholder192280911237271894995</id>
                             <position>
                               <x>52</x>
-                              <y>229</y>
+                              <y>210</y>
                             </position>
                             <name></name>
                             <status reference="../outTransitions/simpleTransition/end/elements/link/status"/>
@@ -225,7 +225,7 @@
                       <id>customteststepholder294288991237271798868</id>
                       <position>
                         <x>53</x>
-                        <y>177</y>
+                        <y>158</y>
                       </position>
                       <name></name>
                       <status reference="../outTransitions/simpleTransition/end/outTransitions/simpleTransition/end/elements/link/status"/>
@@ -582,6 +582,24 @@
       <position>
         <x>0</x>
         <y>5500</y>
+      </position>
+      <dimension>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <name defined-in="transitionNode"></name>
+    </page>
+    <page>
+      <children/>
+      <commons/>
+      <elements/>
+      <name></name>
+      <description></description>
+      <outTransitions/>
+      <id>page1110331237792301945</id>
+      <position>
+        <x>0</x>
+        <y>5800</y>
       </position>
       <dimension>
         <width>0</width>
