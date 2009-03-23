@@ -83,6 +83,86 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
+	 * Retrieves the <code>value</code> property and it will parse it for any
+	 * variables defined in the value. After this it will perform a
+	 * {@link Integer#valueOf(String)} to get the value as an Integer. 
+	 * 
+	 * @return the value of the <code>value</code> property 
+	 */
+	public Integer getArgValueAsInteger() {
+		String _value = getArgValue();
+		
+		Integer _valueAsInteger = null;
+		try {
+			_valueAsInteger = Integer.valueOf(_value);
+		} catch (NumberFormatException numberFormatException) {
+			// Log exception, calling test should test if the number is required or not.
+		}
+		
+		return _valueAsInteger;
+	}
+	
+	/**
+	 * Retrieves the <code>value</code> property and it will parse it for any
+	 * variables defined in the value. After this it will perform a
+	 * {@link Double#valueOf(String)} to get the value as a Double. 
+	 * 
+	 * @return the value of the <code>value</code> property 
+	 */
+	public Double getArgValueAsDouble() {
+		String _value = getArgValue();
+		
+		Double _valueAsDouble = null;
+		try {
+			_valueAsDouble = Double.valueOf(_value);
+		} catch (NumberFormatException numberFormatException) {
+			// Log exception, calling test should test if the number is required or not.
+		}
+		
+		return _valueAsDouble;
+	}
+	
+	/**
+	 * Retrieves the <code>value</code> property and it will parse it for any
+	 * variables defined in the value. After this it will perform a
+	 * {@link Float#valueOf(String)} to get the value as a Float. 
+	 * 
+	 * @return the value of the <code>value</code> property 
+	 */
+	public Float getArgValueAsFloat() {
+		String _value = getArgValue();
+		
+		Float _valueAsFloat = null;
+		try {
+			_valueAsFloat = Float.valueOf(_value);
+		} catch (NumberFormatException numberFormatException) {
+			// Log exception, calling test should test if the number is required or not.
+		}
+		
+		return _valueAsFloat;
+	}
+	
+	/**
+	 * Retrieves the <code>value</code> property and it will parse it for any
+	 * variables defined in the value. After this it will perform a
+	 * {@link Long#valueOf(String)} to get the value as a Long. 
+	 * 
+	 * @return the value of the <code>value</code> property 
+	 */
+	public Long getArgValueAsLong() {
+		String _value = getArgValue();
+		
+		Long _valueAsLong = null;
+		try {
+			_valueAsLong = Long.valueOf(_value);
+		} catch (NumberFormatException numberFormatException) {
+			// Log exception, calling test should test if the number is required or not.
+		}
+		
+		return _valueAsLong;
+	}
+	
+	/**
 	 * Retrieves the <code>format</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
