@@ -3,7 +3,7 @@
   <groupId>nl.sodeso</groupId>
   <artifactId>CubicEx</artifactId>
   <name>CubicEx</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>CubicTest offers great basic functionality, and in most cases it will probably be enough for most people. However it also lacks some functionality that i want to use and in some cases need to use. I think that these function will eventually end up in the CubicTest product, they are working very hard on it. But until then i offer the components that i have written for people to use.</description>
   <url>http://www.sodeso.nl/projecten/cubicex</url>
   <developers>
