@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.AssertElementPresent</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertElementPresent.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>AssertElementPresent</name>
+  <description>Asserts that the specified &lt;target&gt; is present somewhere on the page.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>An element locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
