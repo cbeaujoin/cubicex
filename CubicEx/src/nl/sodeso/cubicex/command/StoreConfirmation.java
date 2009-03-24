@@ -30,7 +30,7 @@ import com.thoughtworks.selenium.Wait;
  * Replaces the <code>storeConfirmation</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class StoreConfirmation extends CubicExBaseTestCase {
 

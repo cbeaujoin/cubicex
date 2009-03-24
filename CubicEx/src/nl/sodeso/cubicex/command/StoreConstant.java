@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Store a value as a variable.
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class StoreConstant extends CubicExBaseTestCase {
 

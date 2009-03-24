@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * The <code>AssertVariables</code> command
  * 
  * @author r.mathies
- * @version 0.0.2
+ * @since 0.0.2
  */
 public class AssertVariables extends CubicExBaseTestCase {
 

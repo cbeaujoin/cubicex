@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Command to fire a URL event.
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class FireLinkEvent extends CubicExBaseTestCase {
 

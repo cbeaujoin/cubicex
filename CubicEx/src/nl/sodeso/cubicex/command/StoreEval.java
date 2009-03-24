@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Replaces the <code>storeEval</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.2
+ * @since 0.0.2
  */
 public class StoreEval extends CubicExBaseTestCase {
 

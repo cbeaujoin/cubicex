@@ -26,24 +26,32 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Adds the <code>ChooseOkOnNextPrompt</code> command
+ * Replaces the <code>StoreCookiePresent</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @since 0.0.1
+ * @since 0.0.3
  */
-public class ChooseOkOnNextPrompt extends CubicExBaseTestCase {
+public class StoreCookiePresent extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(ChooseOkOnNextPrompt.class);
+	private Log log = LogFactory.getLog(StoreCookiePresent.class);
 	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
+		// Retrieve the parameters.
+		final String _variable = getArgVariable();
+		final String _name = getArgName();
+		
 		if (log.isInfoEnabled()) {
-			log.info("ChooseOkOnNextPrompt:");
+			log.info("StoreCookiePresent: variable '" + _variable + "', name '" + _name + "'.");
 		}
 		
-		selenium.chooseOkOnNextConfirmation();		
+		// Retrieve the value.
+		boolean _value = selenium.isCookiePresent(_name);
+		
+		// Store the value.
+		context.put(_variable, _value);
 	}
 
 }

@@ -17,6 +17,10 @@ package nl.sodeso.cubicex;
 
 import java.util.Map;
 
+import nl.sodeso.cubicex.command.AssertAttribute;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.ICustomTestStep;
 import org.cubictest.selenium.custom.IElementContext;
 
@@ -27,9 +31,11 @@ import com.thoughtworks.selenium.Selenium;
  * Base class for all commands.
  * 
  * @author r.mathies
- * @version 0.0.2
+ * @since 0.0.2
  */
 public abstract class CubicExBaseTestCase extends SeleneseTestCase implements ICustomTestStep {
+	
+	private Log log = LogFactory.getLog(AssertAttribute.class);
 	
 	private Map<String, String> arguments = null;
 	private IElementContext context = null;
@@ -96,7 +102,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		try {
 			_valueAsInteger = Integer.valueOf(_value);
 		} catch (NumberFormatException numberFormatException) {
-			// Log exception, calling test should test if the number is required or not.
+			log.error(numberFormatException);
 		}
 		
 		return _valueAsInteger;
@@ -116,7 +122,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		try {
 			_valueAsDouble = Double.valueOf(_value);
 		} catch (NumberFormatException numberFormatException) {
-			// Log exception, calling test should test if the number is required or not.
+			log.error(numberFormatException);
 		}
 		
 		return _valueAsDouble;
@@ -136,7 +142,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		try {
 			_valueAsFloat = Float.valueOf(_value);
 		} catch (NumberFormatException numberFormatException) {
-			// Log exception, calling test should test if the number is required or not.
+			log.error(numberFormatException);
 		}
 		
 		return _valueAsFloat;
@@ -156,7 +162,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		try {
 			_valueAsLong = Long.valueOf(_value);
 		} catch (NumberFormatException numberFormatException) {
-			// Log exception, calling test should test if the number is required or not.
+			log.error(numberFormatException);
 		}
 		
 		return _valueAsLong;
@@ -189,7 +195,11 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String _deviation = arguments.get("deviation");
 		Integer _deviationToUse = 0;
 		if (_deviation != null && _deviation.length() > 0) {
-			_deviationToUse = Integer.valueOf(parseString(_deviation));
+			try {
+				_deviationToUse = Integer.valueOf(parseString(_deviation));
+			} catch (NumberFormatException numberFormatException) {
+				log.error(numberFormatException);
+			}
 		}
 		
 		return _deviationToUse;
@@ -211,8 +221,8 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>expression</code> property.
 	 */
 	public String getArgExpression() {
-		String _variable = arguments.get("expression");
-		return _variable;
+		String _expression = arguments.get("expression");
+		return _expression;
 	}
 	
 	/**
@@ -239,6 +249,22 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			_url = "";
 		}
 		return _url;
+	}
+	
+	/**
+	 * Retrieves the <code>name</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>name</code> property 
+	 */
+	public String getArgName() {
+		String _name = arguments.get("name");
+		if (_name != null && _name.length() > 0) {
+			_name = parseString(_name);
+		} else {
+			_name = "";
+		}
+		return _name;
 	}
 	
 	/**
@@ -285,7 +311,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			try {
 				returnValue = Integer.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
-				// Log exception, calling test should test if the number is required or not.
+				log.error(numberFormatException);
 			}
 		}
 		
@@ -307,7 +333,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			try {
 				returnValue = Long.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
-				// Log exception, calling test should test if the number is required or not.
+				log.error(numberFormatException);
 			}
 		}
 		
@@ -329,7 +355,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			try {
 				returnValue = Double.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
-				// Log exception, calling test should test if the number is required or not.
+				log.error(numberFormatException);
 			}
 		}
 		
@@ -351,7 +377,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 			try {
 				returnValue = Float.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
-				// Log exception, calling test should test if the number is required or not.
+				log.error(numberFormatException);
 			}
 		}
 		

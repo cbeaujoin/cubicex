@@ -31,7 +31,7 @@ import com.thoughtworks.selenium.Wait;
  * Replaces the <code>waitForPromPt</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class WaitForPrompt extends CubicExBaseTestCase {
 

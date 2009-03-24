@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Replaces the <code>VerifyText</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class VerifyNotChecked extends CubicExBaseTestCase {
 

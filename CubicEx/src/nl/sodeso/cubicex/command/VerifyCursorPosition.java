@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Replaces the <code>verifyCursorPosition</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @version 0.0.3
+ * @since 0.0.3
  */
 public class VerifyCursorPosition extends CubicExBaseTestCase {
 

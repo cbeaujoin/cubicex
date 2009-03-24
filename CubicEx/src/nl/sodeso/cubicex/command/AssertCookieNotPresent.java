@@ -26,24 +26,27 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Adds the <code>ChooseOkOnNextPrompt</code> command
+ * Replaces the <code>AssertCookieNotPresent</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @since 0.0.1
+ * @since 0.0.3
  */
-public class ChooseOkOnNextPrompt extends CubicExBaseTestCase {
+public class AssertCookieNotPresent extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(ChooseOkOnNextPrompt.class);
+	private Log log = LogFactory.getLog(AssertCookieNotPresent.class);
 	
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-		if (log.isInfoEnabled()) {
-			log.info("ChooseOkOnNextPrompt:");
-		}
+		// Retrieve the parameters.
+		final String _name = getArgName();
 		
-		selenium.chooseOkOnNextConfirmation();		
+		if (log.isInfoEnabled()) {
+			log.info("AssertCookieNotPresent: name '" + _name + "'.");
+		}
+
+		assertFalse(selenium.isCookiePresent(_name));	
 	}
 
 }

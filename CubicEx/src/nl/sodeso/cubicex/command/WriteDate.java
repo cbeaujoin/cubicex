@@ -31,7 +31,7 @@ import com.thoughtworks.selenium.Selenium;
  * Writes a formatted date to the specified locator.
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class WriteDate extends CubicExBaseTestCase {
 

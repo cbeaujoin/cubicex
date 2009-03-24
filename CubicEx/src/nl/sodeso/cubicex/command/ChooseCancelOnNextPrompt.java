@@ -29,7 +29,7 @@ import com.thoughtworks.selenium.Selenium;
  * Adds the <code>ChooseCancelOnNextPrompt</code> command
  * 
  * @author r.mathies
- * @version 0.0.1
+ * @since 0.0.1
  */
 public class ChooseCancelOnNextPrompt extends CubicExBaseTestCase {
 

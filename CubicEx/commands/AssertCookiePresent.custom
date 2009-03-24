@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.AssertCookiePresent</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertCookiePresent.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>AssertCookiePresent</name>
+  <description>Asserts that the cookie with the specified &lt;name&gt; exists.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>Name of the cookie.</description>
+        <key>name</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
