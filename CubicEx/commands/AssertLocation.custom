@@ -14,10 +14,6 @@
   <parameters>
     <parameters>
       <customTestStepParameter>
-        <description>An element locator.</description>
-        <key>target</key>
-      </customTestStepParameter>
-      <customTestStepParameter>
         <description>(variable sensitive)</description>
         <key>value</key>
       </customTestStepParameter>
