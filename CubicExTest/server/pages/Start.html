@@ -107,6 +107,14 @@
 				td.appendChild(newInput);
 			}
 			
+			function performCreateCookie() {
+				createCookie("sampleCookie", "CookieContents", 30);
+			}
+			
+			function performRemoveCookie() {
+				eraseCookie("sampleCookie");
+			}
+			
             function createCookie(name,value,days) {
 	            var expires;
 	            if (days) {
@@ -141,8 +149,7 @@
 	            createCookie(name,"",-1);
             }
 
-
-
+			performRemoveCookie();
 		</script>
 	</head>
 	<body>
@@ -347,6 +354,21 @@
 						value="Create 7 second element" onclick="javascript: performButtonElementAjax2();"/>
 				</td>
 				<td id="element_2_id">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br/><br/><b>Cookies:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_cookie_create_id" name="button_cookie_create_name"
+						value="Create a cookie" onclick="javascript: performCreateCookie();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button_cookie_remove_id" name="button_cookie_remove_name"
+						value="Remove a cookie" onclick="javascript: performRemoveCookie();"/>
 				</td>
 			</tr>
 			<tr>
