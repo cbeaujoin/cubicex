@@ -23,14 +23,14 @@ import org.cubictest.exporters.selenium.SeleniumRunner;
  * Base JUnit class for running all tests.
  * 
  * @author r.mathies
- * @version 0.0.3
+ * @since 0.0.3
  */
 public class CommandTestSuiteTest extends TestCase {
 
 	public void test() {
 		SeleniumRunner runner = new SeleniumRunner();
 		runner.runTests("/tests");
-				
+
 		//alternatively, run single tests, e.g: 
 		//runner.runTest("/tests/myTest.aat");
 	}
