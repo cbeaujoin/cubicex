@@ -5,12 +5,12 @@
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
         <displayText>nl.sodeso.cubicex.command.VerifyCount</displayText>
-        <path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/VerifyCount.java</path>
+        <path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/AssertCount.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>VerifyCount</name>
-  <description>Verifies if the count of the XPath expression (&amp;lt;target&amp;gr;) is &lt;, &lt;=, ==, &gt;, &gt;= or != to the &lt;value&gt;</description>
+  <name>AssertCount</name>
+  <description>Asserts if the count of the XPath expression (&amp;lt;target&amp;gr;) is &lt;, &lt;=, ==, &gt;, &gt;= or != to the &lt;value&gt;</description>
   <parameters>
     <parameters>
       <customTestStepParameter>

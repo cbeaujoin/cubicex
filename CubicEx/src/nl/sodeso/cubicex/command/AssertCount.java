@@ -26,15 +26,15 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * The <code>VerifyCount</code> command can check if the number of result
+ * The <code>AssertCount</code> command can check if the number of result
  * of an XPath expression is the same, lower then or higher then the expected result.
  * 
  * @author r.mathies
  * @since 0.0.3
  */
-public class VerifyCount extends CubicExBaseTestCase {
+public class AssertCount extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(VerifyCount.class);
+	private Log log = LogFactory.getLog(AssertCount.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -46,24 +46,24 @@ public class VerifyCount extends CubicExBaseTestCase {
 		final String _action = getArgAction();
 		
 		if (log.isInfoEnabled()) {
-			  log.info("VerifyCount: target '" + _locator + "', value '" + _value + "', action '" + _action + "'."); 
+			  log.info("AssertCount: target '" + _locator + "', value '" + _value + "', action '" + _action + "'."); 
 		}
 		
 		// Retrieve the count of the XPath result.
 		Integer _countOfElement = selenium.getXpathCount(_locator).intValue(); 
 		
 		if (_action.equalsIgnoreCase("<")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() < _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() < _value.intValue()), "true");
 		} else if (_action.equalsIgnoreCase("==")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() == _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() == _value.intValue()), "true");
 		} else if (_action.equalsIgnoreCase(">")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() > _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() > _value.intValue()), "true");
 		} else if (_action.equalsIgnoreCase("<=")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() <= _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() <= _value.intValue()), "true");
 		} else if (_action.equalsIgnoreCase(">=")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() >= _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() >= _value.intValue()), "true");
 		} else if (_action.equalsIgnoreCase("!=")) {
-			verifyEquals(String.valueOf(_countOfElement.intValue() != _value.intValue()), "true");
+			assertEquals(String.valueOf(_countOfElement.intValue() != _value.intValue()), "true");
 		}
 	}
 
