@@ -19,7 +19,7 @@
               <hasCustomTimeout>false</hasCustomTimeout>
               <start class="page" reference="../../.."/>
               <end class="customTestStep">
-                <file>commands/VerifyCount.custom</file>
+                <file>commands/AssertCount.custom</file>
                 <values>
                   <entry>
                     <customTestStepParameter>
@@ -590,8 +590,8 @@
     <languages/>
     <observers/>
   </allLanguages>
-  <name>VerifyCount</name>
-  <description>Test for testing the VerifyCount command.</description>
+  <name>AssertCount</name>
+  <description>Test for testing the AssertCount command.</description>
   <id>test1236710165059</id>
   <modelVersion>10</modelVersion>
 </test>
