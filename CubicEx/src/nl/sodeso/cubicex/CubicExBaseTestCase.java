@@ -206,6 +206,23 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
+	 * Retrieves the <code>action</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>action</code> property 
+	 */
+	public String getArgAction() {
+		String _action = arguments.get("action");
+		if (_action != null && _action.length() > 0) {
+			_action = parseString(_action);
+		} else {
+			_action = "";
+		}
+		
+		return _action;
+	}
+	
+	/**
 	 * Retrieves the <code>variable</code> property.
 	 *
 	 * @return the value of the <code>variable</code> property.
