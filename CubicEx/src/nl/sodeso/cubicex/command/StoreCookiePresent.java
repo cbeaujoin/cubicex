@@ -51,7 +51,7 @@ public class StoreCookiePresent extends CubicExBaseTestCase {
 		boolean _value = selenium.isCookiePresent(_name);
 		
 		// Store the value.
-		context.put(_variable, _value);
+		context.put(_variable, _value ? "1" : "0");
 	}
 
 }
