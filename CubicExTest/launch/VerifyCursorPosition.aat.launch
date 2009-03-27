@@ -2,7 +2,7 @@
 <launchConfiguration type="org.cubictest.exporters.selenium.ui.launchConfigurationType">
 <stringAttribute key="CubicTestSeleniumBrowser" value="*firefox"/>
 <booleanAttribute key="CubicTestSeleniumCaptureHtml" value="false"/>
-<stringAttribute key="CubicTestSeleniumName" value="tests/VerifyCount.aat"/>
+<stringAttribute key="CubicTestSeleniumName" value="tests/VerifyCursorPosition.aat"/>
 <booleanAttribute key="CubicTestSeleniumNamespaceXpath" value="false"/>
 <booleanAttribute key="CubicTestSeleniumServerAuto" value="true"/>
 <stringAttribute key="CubicTestSeleniumServerHost" value="localhost"/>
@@ -10,7 +10,7 @@
 <stringAttribute key="CubicTestSeleniumServerPort" value="4444"/>
 <booleanAttribute key="CubicTestSeleniumTakeScreenshots" value="false"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/CubicExTest/tests/VerifyCount.aat"/>
+<listEntry value="/CubicExTest/tests/VerifyCursorPosition.aat"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
