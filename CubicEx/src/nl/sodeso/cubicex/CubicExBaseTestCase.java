@@ -59,7 +59,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		final String _condition = getArgCondition();
 		
 		boolean _performStep = true;
-		if (_condition.length() > 0) {
+		if (isNotEmpty(_condition)) {
 			
 			// Evaluate the condiation.
 			String _result = selenium.getExpression(_condition);
@@ -95,7 +95,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	public String getArgCondition() {
 		String _condition = arguments.get("condition");
 		
-		if (_condition != null && _condition.length() > 0) {
+		if (isNotEmpty(_condition)) {
 			_condition = parseString(_condition);
 		} else {
 			_condition = "";
@@ -113,7 +113,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String _timeout = arguments.get("timeout");
 		
 		long _timeoutToUse = 30000l;
-		if (_timeout != null && _timeout.length() > 0) {
+		if (isNotEmpty(_timeout)) {
 			_timeoutToUse = Long.parseLong(_timeout);
 		}
 		
@@ -128,7 +128,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgValue() {
 		String _value = arguments.get("value");
-		if (_value != null && _value.length() > 0) {
+		if (isNotEmpty(_value)) {
 			_value = parseString(_value);
 		} else {
 			_value = "";
@@ -225,7 +225,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgFormat() {
 		String _format = arguments.get("format");
-		if (_format != null && _format.length() > 0) {
+		if (isNotEmpty(_format)) {
 			_format = parseString(_format);
 		} else {
 			_format = "";
@@ -243,7 +243,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	public int getArgDeviation() {
 		String _deviation = arguments.get("deviation");
 		Integer _deviationToUse = 0;
-		if (_deviation != null && _deviation.length() > 0) {
+		if (isNotEmpty(_deviation)) {
 			try {
 				_deviationToUse = Integer.valueOf(parseString(_deviation));
 			} catch (NumberFormatException numberFormatException) {
@@ -262,7 +262,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgAction() {
 		String _action = arguments.get("action");
-		if (_action != null && _action.length() > 0) {
+		if (isNotEmpty(_action)) {
 			_action = parseString(_action);
 		} else {
 			_action = "";
@@ -309,7 +309,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgUrl() {
 		String _url = arguments.get("URL");
-		if (_url != null && _url.length() > 0) {
+		if (isNotEmpty(_url)) {
 			_url = parseString(_url);
 		} else {
 			_url = "";
@@ -325,7 +325,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgFilename() {
 		String _filename = arguments.get("filename");
-		if (_filename != null && _filename.length() > 0) {
+		if (isNotEmpty(_filename)) {
 			_filename = parseString(_filename);
 		} else {
 			_filename = "";
@@ -342,7 +342,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 */
 	public String getArgName() {
 		String _name = arguments.get("name");
-		if (_name != null && _name.length() > 0) {
+		if (isNotEmpty(_name)) {
 			_name = parseString(_name);
 		} else {
 			_name = "";
@@ -360,7 +360,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	public String getVariableAsString(String variable) {
 		String result = null;
 		
-		if (variable != null && variable.length() > 0) {
+		if (isNotEmpty(variable)) {
 			result = (String)context.get(variable);
 		}
 		
@@ -390,7 +390,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String result = getVariableAsString(variable);
 		
 		Integer returnValue = null;
-		if (result != null && result.length() >0) {
+		if (isNotEmpty(result)) {
 			try {
 				returnValue = Integer.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
@@ -412,7 +412,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String result = getVariableAsString(variable);
 		
 		Long returnValue = null;
-		if (result != null && result.length() >0) {
+		if (isNotEmpty(result)) {
 			try {
 				returnValue = Long.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
@@ -434,7 +434,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String result = getVariableAsString(variable);
 		
 		Double returnValue = null;
-		if (result != null && result.length() >0) {
+		if (isNotEmpty(result)) {
 			try {
 				returnValue = Double.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
@@ -456,7 +456,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		String result = getVariableAsString(variable);
 		
 		Float returnValue = null;
-		if (result != null && result.length() >0) {
+		if (isNotEmpty(result)) {
 			try {
 				returnValue = Float.valueOf(result);
 			} catch (NumberFormatException numberFormatException) {
@@ -496,5 +496,23 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 		}
 		
 		return result;
+	}
+	
+	/**
+	 * 
+	 * @param value
+	 * @return
+	 */
+	public static boolean isEmpty(String value) {
+		return value == null || value.length() == 0;
+	}
+	
+	/**
+	 * 
+	 * @param value
+	 * @return
+	 */
+	public static boolean isNotEmpty(String value) {
+		return isNotEmpty(value);
 	}
 }
