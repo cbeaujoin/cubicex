@@ -88,7 +88,7 @@
                   <simpleTransition>
                     <start class="customTestStep" reference="../../.."/>
                     <end class="customTestStep">
-                      <file>commands/AssertCursorPosition.custom</file>
+                      <file>commands/VerifyNotCursorPosition.custom</file>
                       <values>
                         <entry>
                           <customTestStepParameter>
@@ -107,7 +107,7 @@
                           </customTestStepParameter>
                           <CustomTestStepValue>
                             <parameter reference="../../customTestStepParameter"/>
-                            <value>5</value>
+                            <value>3</value>
                           </CustomTestStepValue>
                         </entry>
                       </values>
@@ -199,8 +199,8 @@
                                   <outTransitions/>
                                   <id>page175040101237271767477</id>
                                   <position>
-                                    <x>73</x>
-                                    <y>322</y>
+                                    <x>49</x>
+                                    <y>315</y>
                                   </position>
                                   <dimension>
                                     <width>115</width>
@@ -212,8 +212,8 @@
                             </outTransitions>
                             <id>page226983141237272112282</id>
                             <position>
-                              <x>33</x>
-                              <y>238</y>
+                              <x>9</x>
+                              <y>231</y>
                             </position>
                             <dimension>
                               <width>196</width>
@@ -223,20 +223,19 @@
                           </end>
                         </simpleTransition>
                       </outTransitions>
-                      <id>customteststepholder326870921238171514062</id>
+                      <id>customteststepholder262018521238391065553</id>
                       <position>
-                        <x>64</x>
-                        <y>189</y>
+                        <x>32</x>
+                        <y>182</y>
                       </position>
                       <name></name>
-                      <status reference="../../../../../../../elements/textField/status"/>
                     </end>
                   </simpleTransition>
                 </outTransitions>
                 <id>customteststepholder296999981238172055717</id>
                 <position>
-                  <x>77</x>
-                  <y>141</y>
+                  <x>53</x>
+                  <y>136</y>
                 </position>
                 <name></name>
                 <status reference="../../../../elements/textField/status"/>
@@ -245,8 +244,8 @@
           </outTransitions>
           <id>page71053781236788402459</id>
           <position>
-            <x>43</x>
-            <y>74</y>
+            <x>20</x>
+            <y>66</y>
           </position>
           <dimension>
             <width>174</width>
@@ -615,10 +614,28 @@
       <name></name>
       <description></description>
       <outTransitions/>
-      <id>page39225361238390968785</id>
+      <id>page291645241238390802095</id>
       <position>
         <x>0</x>
         <y>6100</y>
+      </position>
+      <dimension>
+        <width>0</width>
+        <height>0</height>
+      </dimension>
+      <name defined-in="transitionNode"></name>
+    </page>
+    <page>
+      <children/>
+      <commons/>
+      <elements/>
+      <name></name>
+      <description></description>
+      <outTransitions/>
+      <id>page111886691238391074428</id>
+      <position>
+        <x>0</x>
+        <y>6400</y>
       </position>
       <dimension>
         <width>0</width>
@@ -631,20 +648,20 @@
   <transitions>
     <userInteractionsTransition reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition/end/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition"/>
     <userInteractionsTransition reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition"/>
-    <simpleTransition reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition/end/outTransitions/simpleTransition"/>
     <simpleTransition reference="../../startPoint/outTransitions/simpleTransition"/>
     <simpleTransition reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition"/>
+    <simpleTransition reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition/end/outTransitions/simpleTransition"/>
   </transitions>
   <customTestSteps>
-    <customTestStep reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition/end"/>
     <customTestStep reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end"/>
+    <customTestStep reference="../../startPoint/outTransitions/simpleTransition/end/outTransitions/userInteractionsTransition/end/outTransitions/simpleTransition/end"/>
   </customTestSteps>
   <allLanguages>
     <languages/>
     <observers/>
   </allLanguages>
-  <name>FireFocusEvent</name>
-  <description>Test for testing the FireFocusEvent command.</description>
+  <name>VerifyNotCursorPosition</name>
+  <description>Test for testing the VerifyNotCursorPosition command.</description>
   <id>test1236710165059</id>
   <modelVersion>10</modelVersion>
 </test>
