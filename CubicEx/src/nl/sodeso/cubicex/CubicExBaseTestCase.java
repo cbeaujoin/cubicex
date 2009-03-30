@@ -269,6 +269,23 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
+	 * Retrieves the <code>filename</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>filename</code> property 
+	 */
+	public String getArgFilename() {
+		String _filename = arguments.get("filename");
+		if (_filename != null && _filename.length() > 0) {
+			_filename = parseString(_filename);
+		} else {
+			_filename = "";
+		}
+		return _filename;
+	}
+	
+	
+	/**
 	 * Retrieves the <code>name</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
