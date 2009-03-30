@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.FireAltKeyDownEvent</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/FireAltKeyDownEvent.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>FireAltKeyDownEvent</name>
+  <description>Press the alt key and hold it down until FireAltKeyUpEvent is called or a new page is loaded.</description>
+  <parameters>
+    <parameters/>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
