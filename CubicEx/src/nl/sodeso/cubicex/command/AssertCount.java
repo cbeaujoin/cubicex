@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  * @since 0.0.3
  */
 public class AssertCount extends CubicExBaseTestCase {
-
-	private Log log = LogFactory.getLog(AssertCount.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -44,10 +40,6 @@ public class AssertCount extends CubicExBaseTestCase {
 		final String _locator = getArgTarget();
 		final Integer _value = getArgValueAsInteger();
 		final String _action = getArgAction();
-		
-		if (log.isInfoEnabled()) {
-			  log.info("AssertCount: target '" + _locator + "', value '" + _value + "', action '" + _action + "'."); 
-		}
 		
 		// Retrieve the count of the XPath result.
 		Integer _countOfElement = selenium.getXpathCount(_locator).intValue(); 

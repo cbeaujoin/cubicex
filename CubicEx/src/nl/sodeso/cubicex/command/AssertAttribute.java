@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,7 +31,7 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class AssertAttribute extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(AssertAttribute.class);
+//	private Log log = LogFactory.getLog(AssertAttribute.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -43,9 +41,13 @@ public class AssertAttribute extends CubicExBaseTestCase {
 		final String _locator = getArgTarget();
 		final String _valueToCompareTo = getArgValue();
 
-		if (log.isInfoEnabled()) {
-			log.info("AssertAttribute: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
-		}
+//		if (log.isInfoEnabled()) {
+//			StringBuilder argumentsBuilder = new StringBuilder(this.getClass().getName() + ": ");
+//			for (String key : arguments.keySet()) {
+//				argumentsBuilder.append(key).append("='").append(arguments.get(key)).append("' ");
+//			}
+//			log.info(this.getClass().getName() + ": target '" + _locator + "', value '" + _valueToCompareTo + "'.");
+//		}
 		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getAttribute(_locator);

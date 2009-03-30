@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -34,8 +32,6 @@ import com.thoughtworks.selenium.Wait;
  */
 public class StoreConfirmation extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(StoreConfirmation.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -44,10 +40,6 @@ public class StoreConfirmation extends CubicExBaseTestCase {
 		final long _timeoutToUse = getArgTimeout();
 		final String _variable = getArgVariable();
 
-		if (log.isInfoEnabled()) {
-			log.info("StoreConfirmation: variable '" + _variable + "', timeout '" + _timeoutToUse + "'.");
-		}
-		
 		new Wait() {
 		  public boolean until() {
 			 boolean isExpectedConfirmationPresent = false;

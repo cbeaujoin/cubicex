@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class VerifyNotCursorPosition extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(VerifyNotCursorPosition.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,11 +38,7 @@ public class VerifyNotCursorPosition extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
 		final Integer _valueToCompareTo = getArgValueAsInteger();
-		
-		if (log.isInfoEnabled()) {
-			log.info("VerifyNotCursorPosition: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
-		}
-		
+
 		// Retrieve the field value.
 		Number _valueOfField = selenium.getCursorPosition(_locator);
 		verifyNotEquals(_valueOfField.intValue(), _valueToCompareTo.intValue());

@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class VerifyTitle extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(VerifyTitle.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,10 +38,6 @@ public class VerifyTitle extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _valueToCompareTo = getArgValue();
 
-		if (log.isInfoEnabled()) {
-			log.info("VerifyTitle: value '" + _valueToCompareTo + "'.");
-		}
-		
 		// Retrieve the field value.
 		String _valueOfTitle = selenium.getTitle();
 		verifyEquals(_valueOfTitle, _valueToCompareTo);

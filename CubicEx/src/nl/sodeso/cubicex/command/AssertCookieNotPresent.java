@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -32,8 +30,6 @@ import com.thoughtworks.selenium.Selenium;
  * @since 0.0.3
  */
 public class AssertCookieNotPresent extends CubicExBaseTestCase {
-
-	private Log log = LogFactory.getLog(AssertCookieNotPresent.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -41,10 +37,6 @@ public class AssertCookieNotPresent extends CubicExBaseTestCase {
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
 		final String _name = getArgName();
-		
-		if (log.isInfoEnabled()) {
-			log.info("AssertCookieNotPresent: name '" + _name + "'.");
-		}
 
 		assertFalse(selenium.isCookiePresent(_name));	
 	}

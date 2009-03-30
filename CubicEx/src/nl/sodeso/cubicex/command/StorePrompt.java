@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -34,8 +32,6 @@ import com.thoughtworks.selenium.Wait;
  */
 public class StorePrompt extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(StorePrompt.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -43,10 +39,6 @@ public class StorePrompt extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final long _timeoutToUse = getArgTimeout();
 		final String _variable = getArgVariable();
-		
-		if (log.isInfoEnabled()) {
-			log.info("StorePrompt: variable '" + _variable + "', timeout '" + _timeoutToUse + "'.");
-		}
 
 		new Wait() {
 		  public boolean until() {

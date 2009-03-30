@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class WriteOnNextPrompt extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(WriteOnNextPrompt.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,10 +38,6 @@ public class WriteOnNextPrompt extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _textToWrite = getArgValue();
 
-		if (log.isInfoEnabled()) {
-			log.info("WriteOnNextPrompt: value '" + _textToWrite + "'.");
-		}
-		
 		selenium.answerOnNextPrompt(_textToWrite);
 	}
 

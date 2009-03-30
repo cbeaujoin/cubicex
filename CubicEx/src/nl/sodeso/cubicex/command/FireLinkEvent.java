@@ -42,10 +42,6 @@ public class FireLinkEvent extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _url = getArgUrl();
 
-		if (log.isInfoEnabled()) {
-			log.info("FireLinkEvent: URL '" + _url + "'.");
-		}
-		
 		selenium.open(_url);
 	}
 

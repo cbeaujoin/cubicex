@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class StoreConstant extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(StoreConstant.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,11 +38,7 @@ public class StoreConstant extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _variable = getArgVariable();
 		final String _textToStore = getArgValue();
-		
-		if (log.isInfoEnabled()) {
-			log.info("StoreConstant: variable '" + _variable + "', value '" + _textToStore + "'.");
-		}
-		
+
 		setVariable(_variable, _textToStore);
 	}
 

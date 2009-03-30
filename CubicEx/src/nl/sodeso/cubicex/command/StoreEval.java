@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class StoreEval extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(StoreEval.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -43,11 +39,7 @@ public class StoreEval extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _expression = getArgExpression();
 		final String _variable = getArgVariable();
-		
-		if (log.isInfoEnabled()) {
-			log.info("storeEval: expression '" + _expression + "', variable '" + _variable + "'.");
-		}
-		
+
 		// Retrieve the value.
 		String _value = selenium.getEval(_expression);
 		

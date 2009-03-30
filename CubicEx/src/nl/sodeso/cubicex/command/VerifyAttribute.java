@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class VerifyAttribute extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(VerifyAttribute.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -43,10 +39,6 @@ public class VerifyAttribute extends CubicExBaseTestCase {
 		final String _locator = getArgTarget();
 		final String _valueToCompareTo = getArgValue();
 
-		if (log.isInfoEnabled()) {
-			log.info("VerifyAttribute: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
-		}
-		
 		// Retrieve the field value.
 		String _valueOfField = selenium.getAttribute(_locator);
 		verifyEquals(_valueOfField, _valueToCompareTo);

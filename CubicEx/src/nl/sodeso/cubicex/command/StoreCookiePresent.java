@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class StoreCookiePresent extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(StoreCookiePresent.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,11 +38,7 @@ public class StoreCookiePresent extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _variable = getArgVariable();
 		final String _name = getArgName();
-		
-		if (log.isInfoEnabled()) {
-			log.info("StoreCookiePresent: variable '" + _variable + "', name '" + _name + "'.");
-		}
-		
+
 		// Retrieve the value.
 		boolean _value = selenium.isCookiePresent(_name);
 		

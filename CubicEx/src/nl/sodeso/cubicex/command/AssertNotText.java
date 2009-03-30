@@ -19,8 +19,6 @@ import java.util.Map;
 
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -33,8 +31,6 @@ import com.thoughtworks.selenium.Selenium;
  */
 public class AssertNotText extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(AssertNotText.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -42,11 +38,7 @@ public class AssertNotText extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _locator = getArgTarget();
 		final String _valueToCompareTo = getArgValue();
-		
-		if (log.isInfoEnabled()) {
-			log.info("AssertNotText: target '" + _locator + "', value '" + _valueToCompareTo + "'.");
-		}
-		
+
 		// Retrieve the field value.
 		String _valueOfField = selenium.getText(_locator);
 		assertNotEquals(_valueToCompareTo, _valueOfField);

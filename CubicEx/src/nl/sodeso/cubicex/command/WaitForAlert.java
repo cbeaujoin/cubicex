@@ -20,8 +20,6 @@ import java.util.Map;
 import junit.framework.Assert;
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
@@ -35,8 +33,6 @@ import com.thoughtworks.selenium.Wait;
  */
 public class WaitForAlert extends CubicExBaseTestCase {
 
-	private Log log = LogFactory.getLog(WaitForAlert.class);
-	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -44,11 +40,7 @@ public class WaitForAlert extends CubicExBaseTestCase {
 		// Retrieve the parameters.
 		final String _valueToCompareTo = getArgValue();
 		final long _timeoutToUse = getArgTimeout();
-		
-		if (log.isInfoEnabled()) {
-			log.info("WaitForAlert: value '" + _valueToCompareTo + "', timeout '" + _timeoutToUse + "'.");
-		}
-		
+
 		new Wait() {
 		  public boolean until() {
 			 boolean isExpectedAlertPresent = false;
