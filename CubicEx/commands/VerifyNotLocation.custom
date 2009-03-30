@@ -14,6 +14,10 @@
   <parameters>
     <parameters>
       <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>    
+      <customTestStepParameter>
         <description>An element locator.</description>
         <key>target</key>
       </customTestStepParameter>

@@ -12,6 +12,11 @@
   <name>ChooseCancelOnNextPrompt</name>
   <description>When the next confirmation window pops up it will choose Cancel.</description>
   <parameters>
-    <parameters/>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+    </paramters>
   </parameters>
 </org.cubictest.model.customstep.CustomTestStep>

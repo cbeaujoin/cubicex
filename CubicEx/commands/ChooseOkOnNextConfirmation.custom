@@ -12,6 +12,11 @@
   <name>ChooseOkOnNextConfirmation</name>
   <description>When the next confirmation window pops up it will choose OK.</description>
   <parameters>
-    <parameters/>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+    </parameters>
   </parameters>
 </org.cubictest.model.customstep.CustomTestStep>
