@@ -17,8 +17,6 @@ package nl.sodeso.cubicex;
 
 import java.util.Map;
 
-import nl.sodeso.cubicex.command.AssertAttribute;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.cubictest.selenium.custom.ICustomTestStep;
@@ -35,7 +33,7 @@ import com.thoughtworks.selenium.Selenium;
  */
 public abstract class CubicExBaseTestCase extends SeleneseTestCase implements ICustomTestStep {
 	
-	private Log log = LogFactory.getLog(AssertAttribute.class);
+	private Log log = LogFactory.getLog(CubicExBaseTestCase.class);
 	
 	private Map<String, String> arguments = null;
 	private IElementContext context = null;
@@ -46,14 +44,65 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	public void execute(Map<String, String> arguments, IElementContext context, Selenium selenium) throws Exception {
 		this.arguments = arguments;
 		this.context = context;
+
+		// Logging information
+		if (log.isInfoEnabled()) {
+			StringBuilder argumentsBuilder = new StringBuilder(this.getClass().getName() + ": ");
+			for (String key : arguments.keySet()) {
+				argumentsBuilder.append(key).append("='").append(arguments.get(key)).append("' ");
+			}
+			
+			log.info(argumentsBuilder.toString());
+		}
 		
-		executeTest(arguments, context, selenium);
+		// Retrieve the parameters.
+		final String _condition = getArgCondition();
+		
+		boolean _performStep = true;
+		if (_condition.length() > 0) {
+			
+			// Evaluate the condiation.
+			String _result = selenium.getExpression(_condition);
+			
+			// If the result is not true or not 1 then we won't perform this step and just continue
+			// to the next step.
+			if (!_result.equals("true") || !_result.equals("1")) {
+				_performStep = false;
+			}
+		}
+		
+		if (_performStep) {
+			executeTest(arguments, context, selenium);
+		} else {
+			if (log.isInfoEnabled()) {
+				log.info(this.getClass().getName() + ": Is skipped.");
+			}
+		}
 	}
 	
 	/**
 	 * @see ICustomTestStep#execute(Map, IElementContext, Selenium)
 	 */
 	public abstract void executeTest(Map<String, String> arguments, IElementContext context, Selenium selenium) throws Exception;
+	
+	
+	/**
+	 * Retrieves the <code>condition</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>condition</code> property 
+	 */
+	public String getArgCondition() {
+		String _condition = arguments.get("condition");
+		
+		if (_condition != null && _condition.length() > 0) {
+			_condition = parseString(_condition);
+		} else {
+			_condition = "";
+		}
+		
+		return _condition;
+	}
 	
 	/**
 	 * Retrieves the <code>timeout</code> property.
