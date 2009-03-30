@@ -17,48 +17,29 @@ package nl.sodeso.cubicex.command;
 
 import java.util.Map;
 
-import junit.framework.Assert;
 import nl.sodeso.cubicex.CubicExBaseTestCase;
 
 import org.cubictest.selenium.custom.IElementContext;
 
 import com.thoughtworks.selenium.Selenium;
-import com.thoughtworks.selenium.Wait;
 
 /**
- * Replaces the <code>waitForElementPresent</code> command of SeleniumIDE
+ * Replaces the <code>keyDown</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @since 0.0.1
+ * @since 0.0.4
  */
-public class WaitForConfirmation extends CubicExBaseTestCase {
+public class FireKeyDownEvent extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
 		// Retrieve the parameters.
-		final String _valueToCompareTo = getArgValue();
-		final long _timeoutToUse = getArgTimeout();
-
-		new Wait() {
-		  public boolean until() {
-			 boolean isExpectedConfirmationPresent = false;
-			 if (selenium.isConfirmationPresent()) {
-				 if (isNotEmpty(_valueToCompareTo)) {
-					 String _confirmationMessage = selenium.getConfirmation();
-					 Assert.assertEquals(_valueToCompareTo, _confirmationMessage);
-				 } else {
-					 // We need to consume the confirmation otherwise
-					 // the next step will fail.
-					 selenium.getConfirmation();
-				 }
-				 isExpectedConfirmationPresent = true;
-			 }
-			 
-			 return isExpectedConfirmationPresent;
-		  }
-		}.wait("Confirmation window did not appear within " + _timeoutToUse + " milliseconds.", _timeoutToUse);		
+		final String _locator = getArgTarget();
+		final String _keySequence = getArgValue();
+		
+		selenium.keyDown(_locator, _keySequence);
 	}
 
 }

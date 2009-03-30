@@ -45,7 +45,7 @@ public class WaitForAlert extends CubicExBaseTestCase {
 		  public boolean until() {
 			 boolean isExpectedAlertPresent = false;
 			 if (selenium.isAlertPresent()) {
-				 if (_valueToCompareTo != null && _valueToCompareTo.length() > 0) {
+				 if (isNotEmpty(_valueToCompareTo)) {
 					 String _alertMessage = selenium.getAlert();
 					 Assert.assertEquals(_valueToCompareTo, _alertMessage);
 				 } else {

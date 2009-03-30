@@ -45,7 +45,7 @@ public class WaitForPrompt extends CubicExBaseTestCase {
 		  public boolean until() {
 			 boolean isExpectedPromptPresent = false;
 			 if (selenium.isPromptPresent()) {
-				 if (_valueToCompareTo != null && _valueToCompareTo.length() > 0) {
+				 if (isEmpty(_valueToCompareTo)) {
 					 String _promptMessage = selenium.getPrompt();
 					 Assert.assertEquals(_valueToCompareTo, _promptMessage);
 				 } else {

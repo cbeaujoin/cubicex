@@ -24,21 +24,18 @@ import org.cubictest.selenium.custom.IElementContext;
 import com.thoughtworks.selenium.Selenium;
 
 /**
- * Command to fire a URL event.
+ * Replaces the <code>controlKeyUp</code> command of SeleniumIDE
  * 
  * @author r.mathies
- * @since 0.0.1
+ * @since 0.0.4
  */
-public class FireLinkEvent extends CubicExBaseTestCase {
+public class FireControlKeyUpEvent extends CubicExBaseTestCase {
 
 	/**
 	 * {@inheritDoc}
 	 */
 	public void executeTest(final Map<String, String> arguments, final IElementContext context, final Selenium selenium) throws Exception {
-		// Retrieve the parameters.
-		final String _url = getArgUrl();
-
-		selenium.open(_url);
+		selenium.controlKeyUp();
 	}
 
 }
