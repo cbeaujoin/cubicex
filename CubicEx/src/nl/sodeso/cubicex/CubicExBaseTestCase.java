@@ -318,6 +318,38 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
+	 * Retrieves the <code>coordx</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>coordx</code> property 
+	 */
+	public String getArgCoordX() {
+		String _coordX = arguments.get("coordx");
+		if (isNotEmpty(_coordX)) {
+			_coordX = parseString(_coordX);
+		} else {
+			_coordX = "";
+		}
+		return _coordX;
+	}
+	
+	/**
+	 * Retrieves the <code>coordy</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>coordy</code> property 
+	 */
+	public String getArgCoordY() {
+		String _coordY = arguments.get("coordy");
+		if (isNotEmpty(_coordY)) {
+			_coordY = parseString(_coordY);
+		} else {
+			_coordY = "";
+		}
+		return _coordY;
+	}
+	
+	/**
 	 * Retrieves the <code>filename</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
