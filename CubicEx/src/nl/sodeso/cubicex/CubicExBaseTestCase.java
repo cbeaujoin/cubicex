@@ -545,6 +545,6 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return
 	 */
 	public static boolean isNotEmpty(String value) {
-		return isNotEmpty(value);
+		return !isEmpty(value);
 	}
 }
