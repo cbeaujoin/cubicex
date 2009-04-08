@@ -18,7 +18,7 @@
         <key>condition</key>
       </customTestStepParameter>
       <customTestStepParameter>
-        <description>timeout (default is 30 Seconds)</description>
+        <description>A timeout in milliseconds, after which the action will return with an error (default is 30 Seconds)</description>
         <key>timeout</key>
       </customTestStepParameter>
     </parameters>
