@@ -4,13 +4,13 @@
     <entry>
       <string>org.cubictest.seleniumexporter</string>
       <org.cubictest.model.customstep.data.CustomTestStepData>
-        <displayText>nl.sodeso.cubicex.command.FireAltKeyUpEvent</displayText>
-		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/FireAltKeyUpEvent.java</path>
+        <displayText>nl.sodeso.cubicex.command.FireShiftKeyDownEvent</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/FireShiftKeyDownEvent.java</path>
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>FireAltKeyUpEvent</name>
-  <description>Release the alt key.</description>
+  <name>FireShiftKeyDownEvent</name>
+  <description>Press the shift key and hold it down until FireShiftKeyUpEvent is called or a new page is loaded.</description>
   <parameters>
     <parameters>
       <customTestStepParameter>

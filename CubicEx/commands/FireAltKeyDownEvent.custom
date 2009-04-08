@@ -12,6 +12,11 @@
   <name>FireAltKeyDownEvent</name>
   <description>Press the alt key and hold it down until FireAltKeyUpEvent is called or a new page is loaded.</description>
   <parameters>
-    <parameters/>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+    </parameters>
   </parameters>
 </org.cubictest.model.customstep.CustomTestStep>

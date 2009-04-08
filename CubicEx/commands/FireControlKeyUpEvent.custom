@@ -9,9 +9,14 @@
       </org.cubictest.model.customstep.data.CustomTestStepData>
     </entry>
   </customSteps>
-  <name>FireAltKeyUpEvent</name>
+  <name>FireControlKeyUpEvent</name>
   <description>Releases the control key.</description>
   <parameters>
-    <parameters/>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+    </parameters>
   </parameters>
 </org.cubictest.model.customstep.CustomTestStep>
