@@ -93,15 +93,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>condition</code> property 
 	 */
 	public String getArgCondition() {
-		String _condition = arguments.get("condition");
-		
-		if (isNotEmpty(_condition)) {
-			_condition = parseString(_condition);
-		} else {
-			_condition = "";
-		}
-		
-		return _condition;
+		return getArgAsString("condition");
 	}
 	
 	/**
@@ -121,20 +113,41 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	}
 	
 	/**
+	 * Retrieves the <code>windowId</code> property and it will parse it for any
+	 * variables defined in the value.
+	 * 
+	 * @return the value of the <code>windowId</code> property 
+	 */
+	public String getArgWindowId() {
+		return getArgAsString("windowId");
+	}
+	
+	/**
 	 * Retrieves the <code>value</code> property and it will parse it for any
 	 * variables defined in the value.
 	 * 
 	 * @return the value of the <code>value</code> property 
 	 */
 	public String getArgValue() {
-		String _value = arguments.get("value");
-		if (isNotEmpty(_value)) {
-			_value = parseString(_value);
+		return getArgAsString("value");
+	}
+	
+	
+	/**
+	 * Retrieves the specified <code>key</code> property and it will parse it for any
+	 * variables defined in the value.  
+	 * 
+	 * @return the value of the specified <code>key</code> property 
+	 */
+	public String getArgAsString(String key) {
+		String _arg = arguments.get(key);
+		if (isNotEmpty(_arg)) {
+			_arg = parseString(_arg);
 		} else {
-			_value = "";
+			_arg = "";
 		}
 		
-		return _value;
+		return _arg;
 	}
 	
 	/**
@@ -224,14 +237,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>format</code> property 
 	 */
 	public String getArgFormat() {
-		String _format = arguments.get("format");
-		if (isNotEmpty(_format)) {
-			_format = parseString(_format);
-		} else {
-			_format = "";
-		}
-		
-		return _format;
+		return getArgAsString("format");
 	}
 	
 	/**
@@ -261,14 +267,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>action</code> property 
 	 */
 	public String getArgAction() {
-		String _action = arguments.get("action");
-		if (isNotEmpty(_action)) {
-			_action = parseString(_action);
-		} else {
-			_action = "";
-		}
-		
-		return _action;
+		return getArgAsString("action");
 	}
 	
 	/**
@@ -308,13 +307,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>url</code> property 
 	 */
 	public String getArgUrl() {
-		String _url = arguments.get("URL");
-		if (isNotEmpty(_url)) {
-			_url = parseString(_url);
-		} else {
-			_url = "";
-		}
-		return _url;
+		return getArgAsString("URL");
 	}
 	
 	/**
@@ -324,13 +317,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>coordx</code> property 
 	 */
 	public String getArgCoordX() {
-		String _coordX = arguments.get("coordx");
-		if (isNotEmpty(_coordX)) {
-			_coordX = parseString(_coordX);
-		} else {
-			_coordX = "";
-		}
-		return _coordX;
+		return getArgAsString("coordx");
 	}
 	
 	/**
@@ -340,13 +327,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>coordy</code> property 
 	 */
 	public String getArgCoordY() {
-		String _coordY = arguments.get("coordy");
-		if (isNotEmpty(_coordY)) {
-			_coordY = parseString(_coordY);
-		} else {
-			_coordY = "";
-		}
-		return _coordY;
+		return getArgAsString("coordy");
 	}
 	
 	/**
@@ -356,13 +337,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>filename</code> property 
 	 */
 	public String getArgFilename() {
-		String _filename = arguments.get("filename");
-		if (isNotEmpty(_filename)) {
-			_filename = parseString(_filename);
-		} else {
-			_filename = "";
-		}
-		return _filename;
+		return getArgAsString("filename");
 	}
 	
 	
@@ -373,13 +348,7 @@ public abstract class CubicExBaseTestCase extends SeleneseTestCase implements IC
 	 * @return the value of the <code>name</code> property 
 	 */
 	public String getArgName() {
-		String _name = arguments.get("name");
-		if (isNotEmpty(_name)) {
-			_name = parseString(_name);
-		} else {
-			_name = "";
-		}
-		return _name;
+		return getArgAsString("name");
 	}
 	
 	/**
