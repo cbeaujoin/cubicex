@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.WaitForPopUp</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/WaitForPopUp.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>WaitForPopUp</name>
+  <description>Waits for a popup to appear.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>The window id of the popup window.</description>
+        <key>windowId</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>timeout (default is 30 Seconds)</description>
+        <key>timeout</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
