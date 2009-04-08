@@ -2,6 +2,35 @@
 	<head>
 		<title>Start Page</title>
 		<script type="text/javascript">
+		
+			document.defaultAction = true;
+			
+			
+			function onKeyDownEvent(event) {
+				
+				var e = event || window.event;
+				var _field = document.getElementById("input_keyevent_1_id");
+				if (e.keyCode == 16) {
+					_field.value = "shift down";
+				} else if (e.keyCode == 17) {
+					_field.value = "control down";
+				} else if (e.keyCode == 18) {
+					_field.value = "alt down";
+				}
+			}
+			
+			function onKeyUpEvent(event) {
+				var e = event || window.event;
+				var _field = document.getElementById("input_keyevent_1_id");
+				if (e.keyCode == 16) {
+					_field.value = "shift up";
+				} else if (e.keyCode == 17) {
+					_field.value = "control up";
+				} else if (e.keyCode == 18) {
+					_field.value = "alt up";
+				}
+			}
+		
 			function performButtonAjax1() {
 				setTimeout("performButtonAjax1Execute()", 2000);
 			}
@@ -287,6 +316,17 @@
 				</td>
 				<td>
 					<input type="text" style="visibility: hidden" id="input_hidden_text_1_id" name="input_hidden_text_1_id" value="Hidden field"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><b>Keyevent textfields:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					HTML input field with text (1):
+				</td>
+				<td>
+					<input type="text" id="input_keyevent_1_id" name="input_keyevent_1_name" onkeydown="onKeyDownEvent(event);" onkeyup="onKeyUpEvent(event);"/>
 				</td>
 			</tr>
 			<tr>
