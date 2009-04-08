@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.Pause</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/Pause.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>Pause</name>
+  <description>Pauses the test for the specified amount of time.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>timeout (default is 30 Seconds)</description>
+        <key>timeout</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
