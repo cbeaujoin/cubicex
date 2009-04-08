@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<org.cubictest.model.customstep.CustomTestStep>
+  <customSteps>
+    <entry>
+      <string>org.cubictest.seleniumexporter</string>
+      <org.cubictest.model.customstep.data.CustomTestStepData>
+        <displayText>nl.sodeso.cubicex.command.FireKeyDownEvent</displayText>
+		<path>/CibicExt/src/main/java/nl/sodeso/cubicex/command/FireKeyDownEvent.java</path>
+      </org.cubictest.model.customstep.data.CustomTestStepData>
+    </entry>
+  </customSteps>
+  <name>FireKeyDownEvent</name>
+  <description>Simulates a user pressing a key.</description>
+  <parameters>
+    <parameters>
+      <customTestStepParameter>
+        <description>Condition to prevent this step from executing.</description>
+        <key>condition</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>An element locator.</description>
+        <key>target</key>
+      </customTestStepParameter>
+      <customTestStepParameter>
+        <description>Either be a string("\" followed by the numeric keycode of the key to be pressed, normally the ASCII value of that key), or a single character. For example: "w", "\119".</description>
+        <key>value</key>
+      </customTestStepParameter>
+    </parameters>
+  </parameters>
+</org.cubictest.model.customstep.CustomTestStep>
