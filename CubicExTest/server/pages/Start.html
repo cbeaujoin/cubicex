@@ -4,7 +4,9 @@
 		<script type="text/javascript">
 		
 			document.defaultAction = true;
-			
+
+			var alsoDisplayAlertOnKeyDownEvent = false;
+			var alsoDisplayAlertOnKeyUpEvent = false;
 			
 			function onKeyDownEvent(event) {
 				
@@ -17,6 +19,10 @@
 				} else if (e.keyCode == 18) {
 					_field.value = "alt down";
 				}
+				
+				if (alsoDisplayAlertOnKeyDownEvent) {
+					alert(_field.value);
+				}
 			}
 			
 			function onKeyUpEvent(event) {
@@ -28,6 +34,10 @@
 					_field.value = "control up";
 				} else if (e.keyCode == 18) {
 					_field.value = "alt up";
+				}
+				
+				if (alsoDisplayAlertOnKeyUpEvent) {
+					alert(_field.value);
 				}
 			}
 		
@@ -239,6 +249,28 @@
 	</head>
 	<body>
 		<table>
+			<tr>
+				<td colspan="2"><b>Behaviour:</b><br/><br/></td>
+			</tr>
+			<tr>
+				<td>
+					Display alert on key down?
+				</td>
+				<td>
+					<input type="checkbox" id="checkbox_display_on_key_down_id" name="checkbox_display_on_key_down_name" 
+						onchange="javascript: alsoDisplayAlertOnKeyDownEvent = this.checked;"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Display alert on key up?
+				</td>
+				<td>
+					<input type="checkbox" id="checkbox_display_on_key_up_id" name="checkbox_display_on_key_up_name" 
+						onchange="javascript: alsoDisplayAlertOnKeyUpEvent = this.checked;"/>
+				</td>
+			</tr>
+
 			<tr>
 				<td colspan="2"><b>Simple textfields:</b><br/><br/></td>
 			</tr>
