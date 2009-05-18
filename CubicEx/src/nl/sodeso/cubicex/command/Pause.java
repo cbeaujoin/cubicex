@@ -38,7 +38,8 @@ public class Pause extends CubicExBaseTestCase {
 
 		// Retrieve the parameters.
 		final long _timeout = getArgTimeout();
-		selenium.wait(_timeout);
+		Thread.sleep(_timeout);
+//		selenium.wait(_timeout);
 	}
 
 }
